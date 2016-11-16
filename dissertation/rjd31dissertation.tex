@@ -6,7 +6,7 @@
 \title{
 Deliverable 1: Final Year Dissertation\\
 \vspace{10mm}
-Evolving a Learning Agent using Neuroevolution in the FightingICE Game Framework\\
+Evolving a Learning Agent using Neuroevolution in the FightingICE Game Platform\\
 \vspace{25mm}
 }
 \date{}
@@ -35,7 +35,7 @@ Signed:\\
 Date: 
 \newpage
 \begin{abstract}
-Neuroevolution is a popular technique for machine learning in which an artificial neural network is trained by an evolutionary algorithm. The technique take from the evolution of the biological nervous systems and is a popular approach for reinforcement learning problems. One way to demonstrate the effectiveness of neuroevolution is through artificial intelligence in games. This project aims to exercise neuroevolution techniques in order to evolve a learning agent in the FightingICE game framework. The agent is evolved with the goal of eventually being competitive versus a human opponent, and its performance will be evaluated at various stages of the evolution.
+Neuroevolution is a popular technique for machine learning in which an artificial neural network is trained by an evolutionary algorithm. The technique takes inspiration from the evolution of the biological nervous system and is a popular approach for reinforcement learning problems. One way to demonstrate the effectiveness of neuroevolution is through artificial intelligence in games. This project aims to implement a learning agent in the FightingICE platform, a two-dimensional Java fighting game organised and maintained by Ritsumeikan University, Kyoto. The agent is designed to evolve through neuroevolution to improve its performance in the game, eventually becoming competitive versus a human opponent. By implementing a neuroevolution method in a simplistic environment, we hope to evaluate the effectiveness of neuroevolution as a method of machine learning and explore the potential of our agent's performance.
 \end{abstract}
 \newpage
 \tableofcontents
@@ -43,59 +43,60 @@ Neuroevolution is a popular technique for machine learning in which an artificia
 \section{Introduction}
 \newpage
 \section{Literature Review}
-\subsection{Artificial Neural Networks}
+\subsection{Machine Learning}
+\subsubsection{Learning Paradigms}
+Learning is an essential human function in which we modify our behaviour tendency according to experiences, to become better when a similar situation occurs. In the study of machine learning, algorithms, computer applications, and systems, utilise learning to improve their performance at certain tasks. There are two main entities in the machine learning model, the teacher and the learner. The teacher contains the knowledge to perform a given task while the learner has to learn the knowledge the teacher holds [book]. There are three types of machine learning[pat]:
+\begin{enumerate}
+\item \emph{Supervised Learning}\\
+A teacher provides the learner with a set of input and desired output pairs. The learner can then use these examples to improve its performance at the task.
+\item \emph{Unsupervised/Self-organised Learning}\\
+There is no teacher, so the learner learns based only on the stimuli received. A common application is finding patterns or grouping within data, using methods such as cluster analysis.
+\item \emph{Reinforcement Learning}\\
+The agent uses goal-directed learning where a notion of reward is introduced and the agent attempts to maximise this reward. There is no teacher for the agent and no explicit model of the environment.
+\end{enumerate}
+
+\subsubsection{Incremental Evolution}
+When an agent is provided with a complex behaviour, it may have trouble evolving to perform at its potential. Using incremental evolution, the behaviour can be learnt incrementally with tasks gradually increasing in difficulty. [inc] 
+
+\subsubsection{Co-evolution}
+\subsection{Neuroevolution}
 \subsubsection{Fundamentals}
+Neuroevolution is a popular biologically-inspired method of machine learning in which an artificial neural network is evolved using an evolutionary algorithm. The popularity of the method stems from the fact that artificial intelligence and control problems can be cast as optimisation problems, and since the method is grounded in biological metaphor and evolutionary theory.\cite{risi}
+
+What is neuroevolution and how it can be used for optimisation. ANNs evolving with EAs.
+
 Artificial neural networks  
 Neural networks are about associative memory or content-addressable memory. Neural networks are also about parallel processing.[book] 
 Used for pattern 
 What a perceptron is
 
-\subsubsection{Activation Function}
+\subsubsection{Artificial Neural Networks}
+
+The nervous system is responsible for 
+Artificial neural networks model the way the brain solves problems with collections of neurons co.  
+
 More general nonlinear functions can be used. Usually required to saturate at -1 and +1. Tanhx (include image). \\
 \includegraphics[width=\textwidth]{tanh}
 Another possibility is to have neurons operate probabilistically. State is again +1 or -1 but now only a probability is given for the state to be -1 or +1.
 
-\subsubsection{Network Training}
+\subsubsection{Genetic Algorithms}
 Multi-layer feed forward networks can learn by example, where the examples are inputs of which the outputs are known. This method of learning is called supervised learning. [book]
 Neural networks are In order to train an artificial neural network, weights between neurons need to be adjusted in order to map th
 
-\subsubsection{Biological Influence} 
-
-\subsection{Machine Learning}
-
-Artificial neural networks are 
-\subsection{Neuroevolution}
-Neuroevolution is a popular biologically-inspired method of machine learning in which an artificial neural network is evolved using an evolutionary algorithm. The popularity of the method stems from the fact that artificial intelligence and control problems can be cast as optimisation problems, and since the method is grounded in biological metaphor and evolutionary theory \cite{risi}.
-
-What is neuroevolution and how it can be used for optimisation. ANNs evolving with EAs.
-
-\subsubsection{Artificial Neural Networks}
-What is an ANN. Different types of ANNs and benefits/drawbacks of each. Decisions which need to be made when implementing such as initial topology and weights.
-
-
-\subsubsection{Evolutionary Algorithms}
-How the EA alters the ANN, changing topology or weights. Types of EAs and pros/cons of each. How fitnesses are evaluated and mutation rate etc chosen.
-
-\subsubsection{Performance of Neuroevolution}
-Discuss how neuroevolution performs compared vs. other machine learning methods. Present success stories and any potential drawbacks/limitations.
-
 \subsubsection{Neuroevolution in Games}
 How neuroevolution can be used to evolve learning agents in games, usually agent is optimising some value e.g. HP. How fitness in games is evaluated, giving some examples. How neuroevolution fares compared to other learning algorithms. Present examples of projects implementing neuroevolution to learn.
-\subsection{Machine Learning}
-\subsubsection{Learning Paradigms}
-Learning is an essential human function in which we modify our behaviour tendency according to experiences, to become better when a similar situation occurs. In the study of machine learning, algorithms, computer applications, and systems, utilise learning to improve their performance at certain tasks. There are two main entities in the machine learning model, the teacher and the learner. The teacher contains the knowledge to perform a given task while the learner has to learn 
 
-\subsubsection{Incremental Evolution}
-
-\newpage
 \subsection{FightingICE}
-\subsubsection{Game Framework}
-What the FightingICE game is and details about the framework such as the language it's written in. Discuss reasons for choosing this over other possible frameworks/games.
+\subsubsection{Game Platform}
+FightingICE is a Java based game platform organised and maintained by Intelligent Computer Entertainment Lab., Ritsumeikan University. The game is based in an arena where two fighters are competing versus each other, attempting to deplete the other's hit-points while preserving their own. The FightingICE platform was designed to allow easy development and evaluation of artificially agents in the game for research or hobby purposes. Once implemented, an agent receives information about the state of the game from the platform periodically, such as the opponent player's location and current energy levels. A delay is added to this game information in order to simulate the delay a human player would experience from reaction time.\\
+\includegraphics[width=\textwidth]{fightingICE}
 
 \subsubsection{Game Agents}
-Present information on the agents in the FightingICE game. The capabilities of the agents including which attack moves / movement commands they can do. Touch on fitness evaluation (how to win the game: keep enemy HP low and your HP high).
+Agents in the game have two main attributes- hit-points and energy. There are four characters available in the game: Zen, Garnet, Lud, and Kfm. Each of these characters is capable of moving, performing attacks, and combing these attacks into deadly combos. 
+Present information on the agents in the FightingICE game. The capabilities of the agents including which attack moves / movement commands they can do. Touch on fitness evaluation (how to win the game: keep enemy HP low and your HP high).\\
 
-\subsubsection{Related Projects}
+
+\subsubsection{Related Work}
 Discuss and reference relevant projects which have been completed using the FightingICE framework. Discuss what has been achieved in said projects and the potential further research that can be undertaken.
 
 \newpage
