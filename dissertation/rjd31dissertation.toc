@@ -16,8 +16,12 @@
 \contentsline {subsubsection}{\numberline {2.3.1}Game Platform}{10}
 \contentsline {subsubsection}{\numberline {2.3.2}Game Agents}{10}
 \contentsline {subsubsection}{\numberline {2.3.3}Related Projects}{11}
-\contentsline {section}{\numberline {3}Requirements}{12}
-\contentsline {section}{\numberline {4}Evaluation Strategy}{13}
-\contentsline {section}{\numberline {5}Project Management}{14}
-\contentsline {section}{\numberline {6}References}{14}
-\contentsline {section}{\numberline {7}Appendices}{15}
+\contentsline {section}{\numberline {3}Organisation}{12}
+\contentsline {subsection}{\numberline {3.1}Project Task Analysis}{12}
+\contentsline {subsection}{\numberline {3.2}Requirement Analysis}{13}
+\contentsline {subsubsection}{\numberline {3.2.1}Table of Requirements}{13}
+\contentsline {subsubsection}{\numberline {3.2.2}Requirements Textual Descriptions}{14}
+\contentsline {subsection}{\numberline {3.3}Performance Assessment}{15}
+\contentsline {subsubsection}{\numberline {3.3.1}Table of Project Prototypes}{15}
+\contentsline {subsection}{\numberline {3.4}Risk Assessment}{16}
+\contentsline {section}{\numberline {4}Appendices}{17}

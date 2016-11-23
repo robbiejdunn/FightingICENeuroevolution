@@ -1,6 +1,7 @@
 \documentclass[11pt,a4paper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
+\usepackage{pgfgantt}
 \graphicspath{ {images/}}
 \begin{document}
 \thispagestyle{empty}
@@ -13,7 +14,7 @@
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
   \centering
-  \includegraphics[width=.6\linewidth]{hwrobotics}
+  \includegraphics[width=\linewidth]{hwrobotics}
   \label{fig:test2}
 \end{minipage}
 \end{figure}
@@ -28,14 +29,22 @@
 {\large Robert John Dunn\\
 H00163867\\
 BSc Honours in Computer Science\\
-\vspace{10mm}
-Supervisor:\\
-Dr Patricia A. Vargas\vspace{3mm}\\
-Co-Supervisor:\\
-Dr Fabrício Olivetti de França\vspace{3mm}\\
-Second Reader:\\
-Dr Mohamed Abdelshafy\\}
 }
+\vspace{10mm}
+{\large Supervisor:}\\
+Dr Patricia A. Vargas\\
+School of Mathematical \& Computer Sciences\\
+Heriot-Watt University
+\vspace{3mm}\\
+{\large Co-Supervisor:}\\
+Dr Fabrício Olivetti de França\\
+Center of Mathematics, Computing and Cognition\\
+Federal University of ABC
+\vspace{3mm}\\
+Second Reader:\\
+Dr Mohamed Abdelshafy\\
+School of Mathematical \& Computer Sciences\\
+Heriot-Watt University\\}
 \newpage
 \thispagestyle{empty}
 \vspace*{30mm}
@@ -44,9 +53,7 @@ I,  Robert Dunn confirm that this work submitted for assessment is my own and is
 in my own words. Any uses made within it of the works of other authors in any
 form (e.g., ideas, equations, figures, text, tables, programs) are properly acknowledged
 at any point of their use. A list of the references employed is included.\\
-\\
 Signed:\\
-\\
 Date: 
 \newpage
 \thispagestyle{empty}
@@ -72,7 +79,7 @@ This project aims to implement a neuroevolution algorithm acting on a learning a
 \section{Literature Review}
 \subsection{Machine Learning}
 \subsubsection{Learning Paradigms}
-Learning is an essential human function in which we modify our behaviour tendency according to experiences, to become better when a similar situation occurs. In the study of machine learning, algorithms, computer applications, and systems, utilise learning to improve their performance at certain tasks. There are two main entities in the machine learning model, the teacher and the learner. The teacher contains the knowledge to perform a given task while the learner has to learn the knowledge the teacher holds. \cite{swarmann} There are three types of machine learning [pat]:
+Learning is an essential human function in which we modify our behaviour tendency according to experiences, to become better when a similar situation occurs. In the study of machine learning, algorithms, computer applications, and systems, utilise learning to improve their performance at certain tasks. There are two main entities in the machine learning model, the teacher and the learner. The teacher contains the knowledge to perform a given task while the learner has to learn the knowledge the teacher holds. \cite{swarmann} There are three types of machine learning:
 \begin{enumerate}
 \item \emph{Supervised Learning}\\
 A teacher provides the learner with a set of input and desired output pairs. The learner can then use these examples to improve its performance at the task.
@@ -92,7 +99,7 @@ Artificial neural networks model the way the brain solves problems with collecti
 The most basic version of an ANN (artificial neural network) is a perceptron. A perceptron is a simple machine which takes a variable number of input nodes which connect to a single output node. From the perceptron evolved the multi-layer feed forward network, which incorporates extra 'hidden' layers of neurons between the input and output. The more hidden layers there are and the more nodes in these layers, the more complex behaviour a network can experience.\\
 
 In order to saturate neuron values to a usable range (usually -1 to 1), an activation function is used. The most basic version of this function is ?, where any values below zero will result in an activation of zero, and any values above zero in an activation of one. It is also possible to use more general, non-linear functions such as tanh, shown below.\\
-\includegraphics[width=\textwidth]{tanh}
+\includegraphics[width=0.4\textwidth, height=0.4\textwidth]{tanh}
 
 \subsubsection{Evolutionary Algorithms}
 Evolutionary algorithms are methods of optimisation, where potential solutions to the problem are seen as individuals of some population. Each individual in the population is assigned a fitness value which is calculated according to the performance of the provided solution, and the algorithm works to find the best (fittest) of these solutions. Using techniques inspired by biological evolution such as reproduction, mutation, recombination, and selection, new populations of solutions can be generated and assessed. Using evolutionary algorithms allows fine tuning of the search space through constants such as rate of reproduction and mutation rate. [Elitism?GAs?]
@@ -125,13 +132,18 @@ There are four characters available in the game: Zen, Garnet, Lud, and Kfm. Each
 Discuss and reference relevant projects which have been completed using the FightingICE framework. Discuss what has been achieved in said projects and the potential further research that can be undertaken.
 
 \newpage
-\section{Requirements}
+\section{Organisation}
+\subsection{Project Task Analysis}
+The objective of this project is to evolve an agent in the FightingICE game platform with a neuroevolution method. The agent will be evolved to the point of being competitive versus a human opponent. 
+\newpage
+\subsection{Requirement Analysis}
+\subsubsection{Table of Requirements}
 \begin{tabular}{|p{0.1\linewidth}|p{0.5\linewidth}|p{0.1\linewidth}|p{0.2\linewidth}|}
 \hline
-No. & Requirement & Priority & Predecessors\\ \hline \hline
+No. & Requirement & Priority & Predecessors\\ \hline
 1 & Implement a neural network to control agent's behaviour & High &\\ \hline
 1.1 & Initialise network with random weights, test if sensors can be read and actions output & High &\\ \hline
-1.2 & Implement a simple rule-based agent controlled by a neural network & High & 1.1\\ \hline
+1.2 & Implement a simple rule-based agent for the agent to compete versus & High & 1.1\\ \hline
 1.3 & Test and execute at least one agent from the FightingICE AI competition & Medium &\\ \hline
 2 & Implement an appropriate evolutionary algorithm to evolve the neural network & High & 1\\ \hline
 2.1 & Test whether a simple evolutionary algorithm evolving the weights of the network improves the agent's performance & High & 1\\ \hline
@@ -141,29 +153,25 @@ No. & Requirement & Priority & Predecessors\\ \hline \hline
 3.2 & Evolve against a simple agent, replace opponent with best agent after convergence and continue & Medium & 1, 2, 3.1\\ \hline 
 4 & Evaluate the agent's performance versus a human opponent at various stages of its evolution & High & 1, 2\\ \hline
 \end{tabular}
-\vfill
-\section{Evaluation Strategy}
-Evaluation of the agent's performance will be calculated through the character's hit-points attribute. In FightingICE, both players start at zero hit-points and connected attacks cause these hit-points to be reduced below zero. Once the game is finished, comparisons can be made between both player's hit-points to evaluate the performance of the agent.\\
-
-Evaluation will consist of games played versus a human opponent at different stages of the agent's evolution. This will allow us to analyse how the agent's performance improves over time and in turn the effectiveness of neuroevolution.\\
-
-[ADD MORE]
-
 \newpage
-\section{Project Management}
-
-\section{References}
-
-http://www.cs.utexas.edu/users/nn/downloads/papers/gomez.ijcai99.pdf
-
-https://arxiv.org/abs/1608.02971
-
-https://arxiv.org/abs/1604.00644
-
-https://arxiv.org/abs/1312.5355
-
-https://arxiv.org/abs/1107.0037
-http://nn.cs.utexas.edu/keyword?gomez:ab97
+\subsubsection{Requirements Textual Descriptions}
+\subsubsection*{1 - Implement a neural network to control agent's behaviour}
+\subsubsection*{1.1 - Initialise network with random weights, test if sensors can be read and actions output}
+\subsubsection*{1.2 - Implement a simple rule-based agent for the agent to compete versus}
+\subsubsection*{1.3 - Test and execute at least one agent from the FightingICE AI competition}
+\newpage
+\subsection{Performance Assessment}
+\subsubsection{Table of Project Prototypes}
+\begin{tabular}{|p{0.4\linewidth}|p{0.2\linewidth}|p{0.4\linewidth}|}
+\hline
+Objective & Date & Assessment\\ \hline
+Prototype 1: Agent using neural network to sense environment and output simple actions in FightingICE & 06/01/17 & Agent can proficiently perceive its environment and output simple actions\\ \hline
+Prototype 2: Agent controlled by neural network being evolved by simple evolutionary algorithm, altering only the weights of the network & 20/01/17 & Evaluate agents performance versus simple AI opponent at different stages of its evolution\\ \hline
+Prototype 3: Agent evolved with HyperNEAT or other appropriate neuroevolution method & 17/02/17 & Evaluate agent's performance versus AI and compare whether method was more effective than simple EA\\ \hline
+Prototype 4: Agent with appropriate learning method implemented in incremental evolution environment & 10/03/17 & Agent's environment is adapted to utilise incremental evolution. Agent's performance assessed and compared versus learning without incremental environment.\\ \hline
+\end{tabular}
+\newpage
+\subsection{Risk Assessment}
 \newpage
 \section{Appendices}
 
