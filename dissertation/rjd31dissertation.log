@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.4)  19 NOV 2016 05:01
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.4)  23 NOV 2016 05:29
 entering extended mode
 **rjd31dissertation.tex
 
@@ -17,8 +17,8 @@ an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
 ishmax, welsh, loaded.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\article.cls"
 Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\size12.clo"
-File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\size11.clo"
+File: size11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
 \c@section=\count80
@@ -309,192 +309,257 @@ LaTeX Font Info:    ... okay on input line 5.
 \MPnumerator=\count92
 \makeMPintoPDFobject=\count93
 \everyMPtoPDFconversion=\toks18
-)
+) <images/hwlogo.png, id=1, 1284.8pt x 979.66pt>
+File: images/hwlogo.png Graphic file (type png)
+ <use images/hwlogo.png>
+Package pdftex.def Info: images/hwlogo.png used on input line 11.
+(pdftex.def)             Requested size: 108.0011pt x 82.35066pt.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 24.
+(Font)              <10.95> on input line 13.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 24.
+(Font)              <8> on input line 13.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 13.
+
+<images/hwrobotics.png, id=3, 501.875pt x 501.875pt>
+File: images/hwrobotics.png Graphic file (type png)
+
+<use images/hwrobotics.png>
+Package pdftex.def Info: images/hwrobotics.png used on input line 16.
+(pdftex.def)             Requested size: 108.0011pt x 108.00056pt.
  [1
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 28--36
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <C:/Users/Robbie/Desktop/d
+issertation/FightingICENeuroevolution-master/dissertation/images/hwlogo.png> <C
+:/Users/Robbie/Desktop/dissertation/FightingICENeuroevolution-master/dissertati
+on/images/hwrobotics.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 43--51
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 28--36
+Underfull \hbox (badness 10000) in paragraph at lines 43--51
 
  []
 
 [2] [3]
 (C:\Users\Robbie\Desktop\dissertation\FightingICENeuroevolution-master\disserta
-tion\rjd31dissertation.toc
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 3.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 3.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 3.
-)
+tion\rjd31dissertation.toc)
 \tf@toc=\write3
  [4]
-Underfull \hbox (badness 10000) in paragraph at lines 44--45
+Underfull \hbox (badness 10000) in paragraph at lines 62--63
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 46--47
+Underfull \hbox (badness 10000) in paragraph at lines 64--65
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 48--49
+Underfull \hbox (badness 10000) in paragraph at lines 67--68
 
  []
 
-[5] [6] [7] <images/tanh.png, id=30, 1193.20781pt x 392.21532pt>
+[5] [6]
+Underfull \hbox (badness 10000) in paragraph at lines 90--91
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 92--93
+
+ []
+
+<images/tanh.png, id=30, 1193.20781pt x 392.21532pt>
 File: images/tanh.png Graphic file (type png)
+ <use images/tanh.png>
+Package pdftex.def Info: images/tanh.png used on input line 95.
+(pdftex.def)             Requested size: 360.0pt x 118.33578pt.
 
-<use images/tanh.png>
-Package pdftex.def Info: images/tanh.png used on input line 81.
-(pdftex.def)             Requested size: 390.0pt x 128.19261pt.
- [8 <C:/Users/Robbie/Desktop/dissertation/FightingICENeuroevolution-master/diss
-ertation/images/tanh.png>]
-<images/fightingICE.png, id=34, 1284.8pt x 722.7pt>
+[7 <C:/Users/Robbie/Desktop/dissertation/FightingICENeuroevolution-master/disse
+rtation/images/tanh.png>] [8] [9]
+<images/fightingICE.png, id=41, 1284.8pt x 722.7pt>
 File: images/fightingICE.png Graphic file (type png)
 
 <use images/fightingICE.png>
-Package pdftex.def Info: images/fightingICE.png used on input line 97.
-(pdftex.def)             Requested size: 390.0pt x 219.37004pt.
+Package pdftex.def Info: images/fightingICE.png used on input line 118.
+(pdftex.def)             Requested size: 360.0pt x 202.49797pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 100--102
-
- []
-
-[9 <C:/Users/Robbie/Desktop/dissertation/FightingICENeuroevolution-master/disse
-rtation/images/fightingICE.png>] [10]
-Underfull \hbox (badness 10000) in paragraph at lines 119--120
+Underfull \hbox (badness 10000) in paragraph at lines 121--122
 
  []
 
-[11]
-Underfull \hbox (badness 10000) in paragraph at lines 128--129
+[10 <C:/Users/Robbie/Desktop/dissertation/FightingICENeuroevolution-master/diss
+ertation/images/fightingICE.png>] [11]
+Overfull \hbox (1.3191pt too wide) in paragraph at lines 131--131
+[]\OT1/cmr/m/n/10.95 Priority| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 133--133
+[]\OT1/cmr/m/n/10.95 Initialise net-work with ran-dom
+ []
+
+
+Overfull \hbox (3.23537pt too wide) in paragraph at lines 135--135
+[]\OT1/cmr/m/n/10.95 Medium| 
+ []
+
+
+Underfull \hbox (badness 4913) in paragraph at lines 138--138
+[]\OT1/cmr/m/n/10.95 Adapt and use the Hy-per-NEAT
+ []
+
+
+Overfull \hbox (3.23537pt too wide) in paragraph at lines 138--138
+[]\OT1/cmr/m/n/10.95 Medium| 
+ []
+
+
+Overfull \hbox (3.23537pt too wide) in paragraph at lines 139--139
+[]\OT1/cmr/m/n/10.95 Medium| 
+ []
+
+
+Overfull \hbox (3.23537pt too wide) in paragraph at lines 140--140
+[]\OT1/cmr/m/n/10.95 Medium| 
+ []
+
+
+Overfull \hbox (3.23537pt too wide) in paragraph at lines 141--141
+[]\OT1/cmr/m/n/10.95 Medium| 
+ []
+
+
+Underfull \hbox (badness 1215) in paragraph at lines 142--142
+\OT1/cmr/m/n/10.95 sus a hu-man op-po-nent at var-i-ous
+ []
+
+
+Overfull \hbox (12.0033pt too wide) in paragraph at lines 129--144
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 146--147
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 130--131
+Underfull \hbox (badness 10000) in paragraph at lines 148--149
 
  []
 
-[12]
-Overfull \hbox (30.64563pt too wide) in paragraph at lines 147--149
-[]\OT1/cmr/m/n/12 https://arxiv.org/abs/1107.0037 http://nn.cs.utexas.edu/keywo
-rd?gomez:ab97 
+[12] [13]
+Overfull \hbox (32.67677pt too wide) in paragraph at lines 165--167
+[]\OT1/cmr/m/n/10.95 https://arxiv.org/abs/1107.0037 http://nn.cs.utexas.edu/ke
+yword?gomez:ab97 
+ []
+
+[14]
+Underfull \hbox (badness 4341) in paragraph at lines 180--186
+[]\OT1/cmr/m/n/10.95 Risi, S & To-gelius, J (2015) \OT1/cmr/bx/n/10.95 Neu-roev
+o-lu-tion in Games:
  []
 
 
-Underfull \hbox (badness 5260) in paragraph at lines 161--167
-[]\OT1/cmr/m/n/12 Risi, S & To-gelius, J (2015) \OT1/cmr/bx/n/12 Neu-roevo-lu-t
-ion in Games:
+Underfull \hbox (badness 10000) in paragraph at lines 188--194
+[]\OT1/cmr/m/n/10.95 Pace, A (2014) \OT1/cmr/bx/n/10.95 Im-prov-ing AI for sim-
+u-lated
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 169--175
-[]\OT1/cmr/m/n/12 Pace, A (2014) \OT1/cmr/bx/n/12 Im-prov-ing AI for sim-u-late
-d
+Underfull \hbox (badness 10000) in paragraph at lines 188--194
+\OT1/cmr/bx/n/10.95 cars us-ing Neu-roevo-lu-tion \OT1/cmr/m/n/10.95 [on-line] 
+Avail-able at:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 169--175
-\OT1/cmr/bx/n/12 cars us-ing Neu-roevo-lu-tion \OT1/cmr/m/n/12 [on-line] Avail-
-able at:
+Underfull \hbox (badness 10000) in paragraph at lines 188--194
+\OT1/cmr/m/it/10.95 http://commerce3.derby.ac.uk/ojs/index.php/gb/article/view/
+3/1
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 169--175
-\OT1/cmr/m/it/12 http://commerce3.derby.ac.uk/ojs/index.php/gb/article/view/3/1
+Underfull \hbox (badness 10000) in paragraph at lines 196--202
+[]\OT1/cmr/m/n/10.95 Lampropoulos, A (2005) \OT1/cmr/bx/n/10.95 Ma-chine Learn-
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 177--183
-[]\OT1/cmr/m/n/12 Lampropoulos, A (2005) \OT1/cmr/bx/n/12 Ma-chine Learn-
+Underfull \hbox (badness 10000) in paragraph at lines 196--202
+\OT1/cmr/bx/n/10.95 ing Paradigms \OT1/cmr/m/n/10.95 [on-line] Avail-able at:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 177--183
-\OT1/cmr/bx/n/12 ing Paradigms \OT1/cmr/m/n/12 [on-line] Avail-able at:
+Overfull \hbox (16.26393pt too wide) in paragraph at lines 196--202
+\OT1/cmr/m/it/10.95 http://file.allitebooks.com/20150722/Machine%20Learning%20P
+aradigms-
  []
 
 
-Overfull \hbox (13.40039pt too wide) in paragraph at lines 177--183
-\OT1/cmr/m/it/12 http://file.allitebooks.com/20150722/Machine%20Learning%20Para
-digms-
+Underfull \hbox (badness 5970) in paragraph at lines 204--210
+[]\OT1/cmr/m/n/10.95 Gomez, F & Mi-ikku-lainen, R (1997) \OT1/cmr/bx/n/10.95 In
+-cre-men-tal Evo-lu-
  []
 
 
-Underfull \hbox (badness 7291) in paragraph at lines 185--191
-[]\OT1/cmr/m/n/12 Gomez, F & Mi-ikku-lainen, R (1997) \OT1/cmr/bx/n/12 In-cre-m
-en-tal Evo-lu-
+Underfull \hbox (badness 10000) in paragraph at lines 204--210
+\OT1/cmr/bx/n/10.95 tion of Com-plex Gen-eral Be-haviour \OT1/cmr/m/n/10.95 [on
+-line] Avail-able
  []
 
 
-Underfull \hbox (badness 2726) in paragraph at lines 185--191
-\OT1/cmr/bx/n/12 tion of Com-plex Gen-eral Be-haviour \OT1/cmr/m/n/12 [on-line]
- Avail-able at:
+Underfull \hbox (badness 10000) in paragraph at lines 204--210
+\OT1/cmr/m/n/10.95 at: \OT1/cmr/m/it/10.95 http://nn.cs.utexas.edu/downloads/pa
+pers/gomez.adaptive-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 185--191
-\OT1/cmr/m/it/12 http://nn.cs.utexas.edu/downloads/papers/gomez.adaptive-behavi
-or.pdf
+Underfull \hbox (badness 10000) in paragraph at lines 212--218
+[]\OT1/cmr/m/n/10.95 Batsford, T (2014) \OT1/cmr/bx/n/10.95 Cal-cu-lat-ing Op-t
+i-mal Jungling
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 193--199
-[]\OT1/cmr/m/n/12 Batsford, T (2014) \OT1/cmr/bx/n/12 Cal-cu-lat-ing Op-ti-mal 
-Jungling
+Underfull \hbox (badness 10000) in paragraph at lines 212--218
+\OT1/cmr/bx/n/10.95 Routes in DOTA2 Us-ing Neu-ral Net-works
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 193--199
-\OT1/cmr/bx/n/12 Routes in DOTA2 Us-ing Neu-ral Net-works
+Underfull \hbox (badness 10000) in paragraph at lines 212--218
+\OT1/cmr/bx/n/10.95 and Ge-netic Al-go-rithms \OT1/cmr/m/n/10.95 [on-line] Avai
+l-able at:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 193--199
-\OT1/cmr/bx/n/12 and Ge-netic Al-go-rithms \OT1/cmr/m/n/12 [on-line] Avail-able
- at:
+Underfull \hbox (badness 10000) in paragraph at lines 212--218
+\OT1/cmr/m/it/10.95 http://commerce3.derby.ac.uk/ojs/index.php/gb/article/view/
+14/12
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 193--199
-\OT1/cmr/m/it/12 http://commerce3.derby.ac.uk/ojs/index.php/gb/article/view/14/
-12
- []
-
-[13] [14]
+[15]
 (C:\Users\Robbie\Desktop\dissertation\FightingICENeuroevolution-master\disserta
 tion\rjd31dissertation.aux) ) 
 Here is how much of TeX's memory you used:
- 1365 strings out of 493921
- 17877 string characters out of 3144874
- 69642 words of memory out of 3000000
- 4679 multiletter control sequences out of 15000+200000
- 9763 words of font info for 34 fonts, out of 3000000 for 9000
+ 1371 strings out of 493921
+ 18034 string characters out of 3144874
+ 74652 words of memory out of 3000000
+ 4684 multiletter control sequences out of 15000+200000
+ 8850 words of font info for 31 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 27i,7n,19p,949b,214s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 27i,8n,19p,982b,275s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pub
 lic/amsfonts/cm/cmbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publi
 c/amsfonts/cm/cmbx12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/
 amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/ams
 fonts/cm/cmr12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfon
 ts/cm/cmr17.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/
-cm/cmti12.pfb>
-Output written on rjd31dissertation.pdf (14 pages, 312563 bytes).
+cm/cmti10.pfb>
+Output written on rjd31dissertation.pdf (15 pages, 504606 bytes).
 PDF statistics:
- 74 PDF objects out of 1000 (max. 8388607)
+ 81 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

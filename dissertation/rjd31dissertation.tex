@@ -1,28 +1,43 @@
-\documentclass[12pt,a4paper]{article}
+\documentclass[11pt,a4paper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
 \graphicspath{ {images/}}
 \begin{document}
-\title{
-Deliverable 1: Final Year Dissertation\\
+\thispagestyle{empty}
+\begin{figure}
+\centering
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=.6\linewidth]{hwlogo}
+  \label{fig:test1}
+\end{minipage}%
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=.6\linewidth]{hwrobotics}
+  \label{fig:test2}
+\end{minipage}
+\end{figure}
+{
+\centering
 \vspace{10mm}
-Evolving a Learning Agent using Neuroevolution in the FightingICE Game Platform\\
-\vspace{25mm}
-}
-\date{}
-\author{Robert John Dunn\\
+{\huge Evolving a Learning Agent using Neuroevolution in the FightingICE Game Framework}\\
+\vspace{20mm}
+{\large Deliverable 1: Final Year Dissertation}\\
+{\large Heriot-Watt University}\\
+\vspace{10mm}
+{\large Robert John Dunn\\
 H00163867\\
 BSc Honours in Computer Science\\
-Heriot-Watt University\vspace{15mm}\\
+\vspace{10mm}
 Supervisor:\\
 Dr Patricia A. Vargas\vspace{3mm}\\
 Co-Supervisor:\\
 Dr Fabrício Olivetti de França\vspace{3mm}\\
 Second Reader:\\
-Dr Mohamed Abdelshafy
+Dr Mohamed Abdelshafy\\}
 }
-\maketitle
 \newpage
+\thispagestyle{empty}
 \vspace*{30mm}
 \section*{Declaration}
 I,  Robert Dunn confirm that this work submitted for assessment is my own and is expressed
@@ -34,20 +49,25 @@ Signed:\\
 \\
 Date: 
 \newpage
+\thispagestyle{empty}
 \begin{abstract}
-Neuroevolution is a popular technique for machine learning in which an artificial neural network is trained by an evolutionary algorithm. The technique takes inspiration from the evolution of the biological nervous system and is a popular approach for reinforcement learning problems. One way to demonstrate the effectiveness of neuroevolution is through artificial intelligence in games. This project aims to implement a learning agent in the FightingICE platform, a two-dimensional Java fighting game organised and maintained by Ritsumeikan University, Kyoto. The agent is designed to evolve through neuroevolution to improve its performance in the game, eventually becoming competitive versus a human opponent. By implementing a neuroevolution method in a simplistic environment, we hope to evaluate the effectiveness of neuroevolution as a method of machine learning and explore the potential of our agent's performance.
+Neuroevolution is a popular technique for machine learning in which the topology and/or weights of an artificial neural network are adjusted by an evolutionary algorithm. The technique takes inspiration from the evolution of the biological nervous system and is a popular approach for reinforcement learning problems. One way to demonstrate the effectiveness of neuroevolution is through artificial intelligence in games. This project aims to implement a learning agent in the FightingICE platform, a two-dimensional Java fighting game organised and maintained by Ritsumeikan University, Kyoto. The agent is designed to evolve through neuroevolution to improve its performance in the game, eventually becoming competitive versus a human opponent. By implementing a neuroevolution method in a simplistic environment, we hope to evaluate the effectiveness of neuroevolution as a method of machine learning and explore the potential of our agent's performance.
 \end{abstract}
 \newpage
+\thispagestyle{empty}
 \tableofcontents
 \newpage
 \section{Introduction}
-Machine learning is a heavily researched field of artificial intelligence in which machines are given the ability to learn without being explicitly programmed. Various methods of machine learning exist which allow the machine to adapt itself in order to process new data. One of these methods is neuroevolution, which involves an artificial network being trained with an evolutionary algorithm to imitate the learning process.\\
+\subsection{Motivation}
+Machine learning is a heavily researched field of artificial intelligence in which machines are given the ability to learn without being explicitly programmed. Various methods of machine learning exist which allow the machine to adapt itself in order to process new data. One of these methods is neuroevolution, which involves the weights and/or topology of an artificial neural network being adjusted by an evolutionary algorithm.\\
 
 The neuroevolution method is loosely based on the way the biological nervous system operates: with neurons communicating through axons, represented by nodes of the neural network with weighted connections. Neuroevolution is a form of reinforcement learning, which means a notion of reward is introduced and the machine attempts to maximise said reward. The wide application of reinforcement has given neuroevolution popularity in the fields of artificial life and evolutionary robotics. This notion of reward also allows the method to easily be applied to computer games since the reward is usually simple to measure, e.g. the hit-points of the player's character.\\
 
-This project aims to implement a neuroevolution algorithm acting on a learning agent in the FightingICE game platform. FightingICE is a two-dimensional fighting game written in Java by Intelligent Computer Entertainment Lab, Japan. The platform allows easy implementation of artificial intelligence by sending delayed game information to the agent. Using neuroevolution we hope to evolve an agent to the point of being competitive versus a human opponent, though not unbeatable. The performance of the agent will be evaluated at various stages of the evolution in order to evaluate the effectiveness of our algorithm.\\
+\subsection{Objectives}
+This project aims to implement a neuroevolution algorithm acting on a learning agent in the FightingICE game platform. FightingICE is a two-dimensional fighting game written in Java by Intelligent Computer Entertainment Lab, Japan. The platform allows easy implementation of artificial intelligence by sending delayed game information to the agent. Using neuroevolution we hope to evolve an agent to the point of being competitive versus a human opponent, though not unbeatable. The performance of the agent will be evaluated at various stages of the evolution in order to evaluate the effectiveness of the algorithm. \\
 
-The next section of this dissertation is the literature review which discusses and evaluates relevant technical literature. Followed by requirements for the project identifying system requirements for the target system. Next, the evaluation strategy for the project is presented which details evaluation and analysis to be conducted. Finally an overview of management for the project which includes a timetable for the project, analysis of risks, and considerations of professional, legal, ethical and social issues.
+\subsection{Professional, Legal, Ethical and Social Issues}
+
 \newpage
 \section{Literature Review}
 \subsection{Machine Learning}
@@ -61,34 +81,35 @@ There is no teacher, so the learner learns based only on the stimuli received. A
 \item \emph{Reinforcement Learning}\\
 The agent uses goal-directed learning where a notion of reward is introduced and the agent attempts to maximise this reward. There is no teacher for the agent and no explicit model of the environment.
 \end{enumerate}
-
-\subsubsection{Incremental Evolution}
-When an agent is provided with a complex behaviour, it may have trouble evolving to perform at its potential. Using incremental evolution, the behaviour can be learnt incrementally with tasks gradually increasing in difficulty. This form of evolution proved effective in one implementation \cite{incre}. The agent's task was a prey capture task: the agent moves through the environment and must catch its prey before the set number of time-steps. With increasingly difficult tasks, the agent was able to rapidly improve its performance, and skip many potential generations of evolution.
-
+\newpage
 \subsection{Neuroevolution}
 \subsubsection{Fundamentals}
 Neuroevolution is a popular biologically-inspired method of machine learning in which an artificial neural network is evolved using an evolutionary algorithm. The method has proved popular, especially in the fields of artificial life, evolutionary robotics and computer games. One reason for its popularity is the fact that neuroevolution is a form of reinforcement learning, which can be applied more generally than its counterpart, supervised learning. 
 
 \subsubsection{Artificial Neural Networks}
-Artificial neural networks model the way the brain solves problems with collections of neurons communicating through axons, represented with neurons with weighted connections. Neural networks have an associative (content-addressable) memory and can also implement parallel processing. They are often applied to pattern finding within data.
+Artificial neural networks model the way the brain solves problems with collections of neurons communicating through axons, represented with neurons with weighted connections. Neural networks have an associative (content-addressable) memory and can also implement parallel processing. They are often applied to pattern finding within data.\\
 
-\subsubsection*{Topology}
-The most basic version of an ANN (artificial neural network) is a perceptron. A perceptron is a simple machine which takes a variable number of input nodes which connect to a single output node. From the perceptron evolved the multi-layer feed forward network, which incorporates extra 'hidden' layers of neurons between the input and output. The more hidden layers there are and the more nodes in these layers, the more complex behaviour a network can experience. 
+The most basic version of an ANN (artificial neural network) is a perceptron. A perceptron is a simple machine which takes a variable number of input nodes which connect to a single output node. From the perceptron evolved the multi-layer feed forward network, which incorporates extra 'hidden' layers of neurons between the input and output. The more hidden layers there are and the more nodes in these layers, the more complex behaviour a network can experience.\\
 
-\newpage
-\subsubsection*{Activation Function}  
-In order to saturate neuron values to a usable range (usually -1 to 1), an activation function is used. The most basic version of this function is ?, where any values below zero will result in an activation of zero, and any values above zero in an activation of one. It is also possible to use more general, non-linear functions such as the tanh function, shown below.
+In order to saturate neuron values to a usable range (usually -1 to 1), an activation function is used. The most basic version of this function is ?, where any values below zero will result in an activation of zero, and any values above zero in an activation of one. It is also possible to use more general, non-linear functions such as tanh, shown below.\\
 \includegraphics[width=\textwidth]{tanh}
-Another possibility is to have neurons operate probabilistically.[add more]
 
-\subsubsection*{NEAT (Neuroevolution of Augmenting Topologies)}
-TO DO
+\subsubsection{Evolutionary Algorithms}
+Evolutionary algorithms are methods of optimisation, where potential solutions to the problem are seen as individuals of some population. Each individual in the population is assigned a fitness value which is calculated according to the performance of the provided solution, and the algorithm works to find the best (fittest) of these solutions. Using techniques inspired by biological evolution such as reproduction, mutation, recombination, and selection, new populations of solutions can be generated and assessed. Using evolutionary algorithms allows fine tuning of the search space through constants such as rate of reproduction and mutation rate. [Elitism?GAs?]
 
-
-\subsubsection{Genetic Algorithms}
-
+\subsubsection{NEAT (NeuroEvolution of Augmenting Topologies)}
+NeuroEvolution of Augmenting Topologies (NEAT) is a method of neuroevolution developed by Ken Stanley in 2002, which involves both the weights and the topology of the ANN being altered. The method is a genetic algorithm and involves applying the following three techniques:
+\begin{enumerate}
+\item Track genes with history markers to allow crossover among topologies
+\item Apply speciation to preserve innovations
+\item Developing topologies incrementally from simple initial structures
+\end{enumerate}
+A notable extension of NEAT which could potentially be appropriate for the project is HyperNEAT. HyperNEAT is a hypercube-based extension of the method developed by the Evolutionary Complexity Research Group at UCF.
+\newpage
 \subsubsection{Neuroevolution in Games}
 How neuroevolution can be used to evolve learning agents in games, usually agent is optimising some value e.g. HP. How fitness in games is evaluated, giving some examples. How neuroevolution fares compared to other learning algorithms. Present examples of projects implementing neuroevolution to learn.
+\subsubsection{Incremental Evolution}
+When an agent is provided with a complex behaviour, it may have trouble evolving to perform at its potential. Using incremental evolution, the behaviour can be learnt incrementally with tasks gradually increasing in difficulty. This form of evolution proved effective in one implementation \cite{incre}. The agent's task was a prey capture task: the agent moves through the environment and must catch its prey before the set number of time-steps. With increasingly difficult tasks, the agent was able to rapidly improve its performance, and skip many potential generations of evolution.
 
 \newpage
 \subsection{FightingICE}
@@ -97,8 +118,7 @@ FightingICE is a Java based game platform organised and maintained by Intelligen
 \includegraphics[width=\textwidth]{fightingICE}
 
 \subsubsection{Game Agents}
-Agents in the game have two main attributes- hit-points and energy. There are four characters available in the game: Zen, Garnet, Lud, and Kfm. Each of these characters is capable of moving, performing attacks, and combing these attacks into deadly combos. 
-Present information on the agents in the FightingICE game. The capabilities of the agents including which attack moves / movement commands they can do. Touch on fitness evaluation (how to win the game: keep enemy HP low and your HP high).\\
+There are four characters available in the game: Zen, Garnet, Lud, and Kfm. Each of the characters is capable of moving, performing attacks, and combining these attacks into unique combos. The game starts with each player at 0 hit-points and ? energy. Once a player successfully connects an attack against its opponent, the player's energy is increased and the opponent's hit-points decrease. In order to compete against an opponent, the character must dodge opposing attacks and make effective use of energy to land attacks and reduce the opponent's hit-points.\\
 
 
 \subsubsection{Related Projects}
@@ -106,24 +126,22 @@ Discuss and reference relevant projects which have been completed using the Figh
 
 \newpage
 \section{Requirements}
-Functional:
-
-FR-1 : The agent should be barely competitive versus a human opponent.
-
-FR-2 : A neural network to control the agent's behaviour should be implemented.
-
-FR-3 : An appropriate evolutionary algorithm to evolve the neural network (see FR-2) should be implemented.
-
-FR-4 : The agent's performance versus a human opponent at various stages of evolution should be evaluated.
-
-FR-5 : The agent should be coded in the Java FightingICE platform.\\
-
-Non-functional:
-
-NFR-1 : Incremental evolution could be utilised to skip some generations of evolution.
-
-NFR-2 : Evolution of the neural network could be visualised.
-\newpage
+\begin{tabular}{|p{0.1\linewidth}|p{0.5\linewidth}|p{0.1\linewidth}|p{0.2\linewidth}|}
+\hline
+No. & Requirement & Priority & Predecessors\\ \hline \hline
+1 & Implement a neural network to control agent's behaviour & High &\\ \hline
+1.1 & Initialise network with random weights, test if sensors can be read and actions output & High &\\ \hline
+1.2 & Implement a simple rule-based agent controlled by a neural network & High & 1.1\\ \hline
+1.3 & Test and execute at least one agent from the FightingICE AI competition & Medium &\\ \hline
+2 & Implement an appropriate evolutionary algorithm to evolve the neural network & High & 1\\ \hline
+2.1 & Test whether a simple evolutionary algorithm evolving the weights of the network improves the agent's performance & High & 1\\ \hline
+2.2 & Adapt and use the HyperNEAT method, test whether it improves on the simple algorithm & Medium & 1, 2.1\\ \hline
+3 & Create an incremental evolution environment for the agent & Medium & 1, 2\\ \hline
+3.1 & Limit the capabilities of the opponent and incrementally return them to test whether speed of evolution is improved & Medium & 1, 2\\ \hline
+3.2 & Evolve against a simple agent, replace opponent with best agent after convergence and continue & Medium & 1, 2, 3.1\\ \hline 
+4 & Evaluate the agent's performance versus a human opponent at various stages of its evolution & High & 1, 2\\ \hline
+\end{tabular}
+\vfill
 \section{Evaluation Strategy}
 Evaluation of the agent's performance will be calculated through the character's hit-points attribute. In FightingICE, both players start at zero hit-points and connected attacks cause these hit-points to be reduced below zero. Once the game is finished, comparisons can be made between both player's hit-points to evaluate the performance of the agent.\\
 
@@ -146,6 +164,7 @@ https://arxiv.org/abs/1312.5355
 
 https://arxiv.org/abs/1107.0037
 http://nn.cs.utexas.edu/keyword?gomez:ab97
+\newpage
 \section{Appendices}
 
 \begin{thebibliography}{10}
