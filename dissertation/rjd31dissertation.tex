@@ -39,7 +39,7 @@ Heriot-Watt University
 {\large Co-Supervisor:}\\
 Dr Fabrício Olivetti de França\\
 Center of Mathematics, Computing and Cognition\\
-Federal University of ABC
+Federal University of ABC, Sao Paulo, Brazil
 \vspace{3mm}\\
 Second Reader:\\
 Dr Mohamed Abdelshafy\\
@@ -53,8 +53,10 @@ I,  Robert Dunn confirm that this work submitted for assessment is my own and is
 in my own words. Any uses made within it of the works of other authors in any
 form (e.g., ideas, equations, figures, text, tables, programs) are properly acknowledged
 at any point of their use. A list of the references employed is included.\\
-Signed:\\
-Date: 
+
+Signed: Robert John Dunn\\
+
+Date: 24/11/2016 
 \newpage
 \thispagestyle{empty}
 \begin{abstract}
@@ -81,7 +83,13 @@ From this project, we hope to assess the effectiveness of neuroevolution as a me
 \newpage
 \subsection{Professional, Legal, Ethical and Social Issues}
 \subsubsection{Professional Issues}
+A professional mindset will be employed when approaching this project. The mindset will involve appropriate communication with staff on the project and meeting deadlines reliably. Drafts will also be provided to the project supervisor with suitable time to provide feedback. When dealing with human participants for the agent testing, care will be taken to anonymise the participants data and ensure the data is protected accordingly.
 
+\subsubsection{Legal Issues}
+In order to avoid any legal issues during the project, we will ensure that any code or external work used is correctly referenced and the work holds an appropriate sharing license. This should prevent any copyright claims from outside sources. Since the project is a dissertation project for Heriot-Watt University and is purely for research purposes, there is not likely to be any legal issues arising.
+
+\subsubsection{Ethical and Social Issues}
+The majority of this project will be completed within a controlled, software-development environment, where ethical and social issues are of no concern. When human participants are involved for the agent evaluation, care will be taken to keep the environment safe and risk-free. Since only the use of a computer is involved for the evaluation, there are few potential risks.
 \newpage
 \section{Literature Review}
 In this section of the dissertation, we will present any fundamental concepts used in the project. We will also discuss and evaluate relevant work in the field.
@@ -150,34 +158,52 @@ One of these more general, non-linear activation function is the hyperbolic tang
 \end{figure}
 \newpage
 \subsubsection{Evolutionary Algorithms}
-Evolutionary algorithms are methods of optimisation, where potential solutions to the problem are seen as individuals of some population. Each individual in the population is assigned a fitness value which is calculated according to the performance of the provided solution, and the algorithm works to find the best (fittest) of these solutions. Using techniques inspired by biological evolution such as reproduction, mutation, recombination, and selection, new populations of solutions can be generated and assessed. Using evolutionary algorithms allows fine tuning of the search space through constants such as rate of reproduction and mutation rate. [Elitism?GAs?]
+Evolutionary algorithms are methods of optimisation, where potential solutions to the problem are seen as individuals of some population. Each individual in the population is assigned a fitness value which is calculated according to the performance of the provided solution, and the algorithm works to find the best (fittest) of these solutions. Using techniques inspired by biological evolution such as reproduction, mutation, recombination, and selection, new populations of solutions can be generated and assessed. Using evolutionary algorithms allows fine tuning of the search space through constants such as rate of reproduction and mutation rate. \cite{gas}\\
 
+The implementation of an evolutionary method involves three steps which are repeated indefinitely \cite{ea}:
+\begin{enumerate}
+\item Generate population of initially random individuals.
+\item Evaluate the fitness of each individual in the population.
+\item Update and replace population with methods such as crossover and mutation.
+\end{enumerate}
+\newpage
+\subsubsection{Incremental Evolution}
+When an agent is provided with a complex behaviour, it may have trouble evolving to perform at its potential. Using incremental evolution, the behaviour can be learnt incrementally with tasks gradually increasing in difficulty. This form of evolution proved effective in at least one implementation \cite{incre}. The agent's task was a prey capture task: the agent moves through the environment and must catch its prey before the set number of time-steps. With increasingly difficult tasks, the agent was able to rapidly improve its performance, and skip many potential generations of evolution.\\
+
+We hope to experiment with the usage of incremental evolution in our project to assess whether it has a positive impact on the evolution of the agent.\vspace{10mm}
 \subsubsection{NEAT (NeuroEvolution of Augmenting Topologies)}
-NeuroEvolution of Augmenting Topologies (NEAT) is a method of neuroevolution developed by Ken Stanley in 2002, which involves both the weights and the topology of the ANN being altered. The method is a genetic algorithm and involves applying the following three techniques:
+NeuroEvolution of Augmenting Topologies (NEAT) is a method of neuroevolution developed by Ken Stanley in 2002, which involves both the weights and the topology of the ANN being altered. The method is a genetic algorithm and involves applying the following three techniques: \cite{neat}
 \begin{enumerate}
 \item Track genes with history markers to allow crossover among topologies
 \item Apply speciation to preserve innovations
 \item Developing topologies incrementally from simple initial structures
 \end{enumerate}
-A notable extension of NEAT which could potentially be appropriate for the project is HyperNEAT. HyperNEAT is a hypercube-based extension of the method developed by the Evolutionary Complexity Research Group at UCF.
-\newpage
-\subsubsection{Neuroevolution in Games}
-How neuroevolution can be used to evolve learning agents in games, usually agent is optimising some value e.g. HP. How fitness in games is evaluated, giving some examples. How neuroevolution fares compared to other learning algorithms. Present examples of projects implementing neuroevolution to learn.
-\subsubsection{Incremental Evolution}
-When an agent is provided with a complex behaviour, it may have trouble evolving to perform at its potential. Using incremental evolution, the behaviour can be learnt incrementally with tasks gradually increasing in difficulty. This form of evolution proved effective in at least one implementation \cite{incre}. The agent's task was a prey capture task: the agent moves through the environment and must catch its prey before the set number of time-steps. With increasingly difficult tasks, the agent was able to rapidly improve its performance, and skip many potential generations of evolution.
-
+A notable extension of NEAT which could potentially be appropriate for the project is HyperNEAT. HyperNEAT is a hypercube-based extension of the method developed by the Evolutionary Complexity Research Group at UCF. \cite{hypehype} \cite{hyperneat}
 \newpage
 \subsection{FightingICE}
 \subsubsection{Game Platform}
-FightingICE is a Java based game platform organised and maintained by Intelligent Computer Entertainment Lab., Ritsumeikan University. The game is based in an arena where two fighters are competing versus each other, attempting to deplete the other's hit-points while preserving their own. The FightingICE platform was designed to allow easy development and evaluation of artificially agents in the game for research or hobby purposes. Once implemented, an agent receives information about the state of the game from the platform periodically, such as the opponent player's location and current energy levels. A delay is added to this game information in order to simulate the delay a human player would experience from reaction time.\\
-\includegraphics[width=\textwidth]{fightingICE}
+FightingICE is a Java based game platform organised and maintained by Intelligent Computer Entertainment Lab., Ritsumeikan University. The game is based in an arena where two fighters are competing versus each other, attempting to deplete the other's hit-points while preserving their own. The FightingICE platform was designed to allow easy development and evaluation of artificially agents in the game for research or hobby purposes. Once implemented, an agent receives information about the state of the game from the platform periodically, such as the opponent player's location and current energy levels. A delay is added to this game information in order to simulate the delay a human player would experience from reaction time. \cite{fightingice}\\
 
 \subsubsection{Game Agents}
-There are four characters available in the game: Zen, Garnet, Lud, and Kfm. Each of the characters is capable of moving, performing attacks, and combining these attacks into unique combos. The game starts with each player at 0 hit-points and ? energy. Once a player successfully connects an attack against its opponent, the player's energy is increased and the opponent's hit-points decrease. In order to compete against an opponent, the character must dodge opposing attacks and make effective use of energy to land attacks and reduce the opponent's hit-points.\\
+There are four characters available in the game: Zen, Garnet, Lud, and Kfm. Each of the characters is capable of moving, performing attacks, and combining these attacks into unique combos. The game starts with each player at 0 hit-points and 0 energy. Once a player successfully connects an attack against its opponent, the player's energy is increased and the opponent's hit-points decrease. In order to compete against an opponent, the character must dodge opposing attacks and make effective use of energy to land attacks and reduce the opponent's hit-points.\\
+\begin{figure}[h]
+\centering{
+\includegraphics[width=\textwidth]{fightingICE}
+\caption{Screenshot of the FightingICE platform in action.}
+}
+\end{figure}
+\newpage
+\subsection{Related Work}
+When implementing neuroevolution, a computer game is a common choice of environment. Neuroevolution methods have been used as artificial intelligence in games in the following external projects:
+\begin{itemize}
+\item Improving AI for simulated cars. \cite{pace}
+\item Neuroevolution approach to general video game playing. \cite{genvid}
+\item Calculating optimal jungling routes in the game DOTA2. \cite{dota}
+\item Using neuroevolution to play atari games. \cite{atari}
+\end{itemize} 
+The work has found neuroevolution to be an effective machine-learning algorithm in a computer game environment and the method proved to operate consistently across a diverse range of games.\\
 
-
-\subsubsection{Related Projects}
-Discuss and reference relevant projects which have been completed using the FightingICE framework. Discuss what has been achieved in said projects and the potential further research that can be undertaken.
+There are also numerous agents programmed in the FightingICE platform to compete in competitions. \cite{fightingice} We will test and assess the performance of a select few agents at a later stage of this project. Hopefully from this assessment of the agents we can evaluate the strategies of the programmer to improve the agent's performance as well as the effectiveness of different methods of AI.
 
 \newpage
 \section{Organisation}
@@ -246,20 +272,60 @@ Prototype 3: Agent evolved with HyperNEAT or other appropriate neuroevolution me
 Prototype 4: Agent with appropriate learning method implemented in incremental evolution environment & 10/03/2017 & Agent's environment is adapted to utilise incremental evolution. Agent's performance assessed and compared versus learning without incremental environment.\\ \hline
 \end{tabular}
 \newpage
+\subsubsection{Prototypes Textual Descriptions}
+\subsubsection*{Prototype 1}
+The initial prototype will involve an agent using an artificial neural network to test if the agent's environments can be sensed and the agent can output actions on the platform. Once we have evaluated the agent's functionality we will move towards evolving the neural network.
+
+\subsubsection*{Prototype 2}
+The second prototype will implement a simple evolutionary algorithm in order to alter the weights of the neural network. With an appropriate fitness function for the agent, this method of evolution should result in improvement of the agent's performance. The agent's performance versus both a simple rule-based opponent and a human opponent will be evaluated.
+
+\subsubsection*{Prototype 3}
+The third prototype for the project will involve implementing the HyperNEAT neuroevolution method for the agent. Should we find another, more appropriate, neuroevolution method to apply, we will take it into consideration. Once implemented, the agent utilising the HyperNEAT algorithm will be assessed versus both the rule-based and a human opponent.
+
+\subsubsection*{Prototype 4}
+The final prototype for the project will utilise incremental evolution techniques to improve its rate of evolution. This prototype is due to be finished by the 10th March 2017 and will mark the end of our agent development. Once the final prototype has been completed, evaluation of the agent's performance will commence.
+\newpage
 \subsection{Risk Assessment}
 \subsubsection{Table of Risks}
 \begin{tabular}{|p{0.1\linewidth}|p{0.4\linewidth}|p{0.2\linewidth}|p{0.3\linewidth}|}
 \hline
 No. & Risk Name & Probability & Response\\ \hline
 1 & Laptop failure & Low & Online storage (github), backups\\ \hline
-2 & Difficulties with FightingICE platform & Medium & Consult tutorials and relevant documentation from website\\ \hline
-3 & Difficulties with Java programming & Low & Spend more time familiarising with language and practising\\ \hline
+2 & Difficulties with Java programming & Low & Spend more time familiarising with language and practising\\ \hline
+3 & Difficulties with FightingICE platform & Medium & Consult tutorials and relevant documentation from website\\ \hline
 \end{tabular}
+\subsubsection{Risks Textual Description}
+\subsubsection*{1 - Laptop failure}
+In the case of the laptop being used to develop the project failing, essential code or documentation could be lost. To reduce the impact of this risk, we will ensure to regularly upload the code to a online repository such as GitHUB. We will also back-up any work on external hard-drives or on the university computers.
+\subsubsection*{2 - Difficulties with Java programming}
+To avoid any problems with lack of Java programming expertise, we will spend time familiarising ourselves with the language before development.
+\subsubsection*{3 - Difficulties with FightingICE platform}
+Since there is plenty of information and lots of tutorials on agent development with the platform, we should be able to easily familiarise ourselves with it.
+\newpage
+\subsection{Project Plan}
+Figure 5 shows a gantt chart representing a timeline for the completion of the project including all prototypes, the dissertation and the project poster. With this project plan we hope to leave appropriate time to evaluate any results as well as carefully thought out prototype deadline which will result in any code problems occurring early. The plan has been shown to and approved by both the project supervisor and co-supervisor.
+\vspace{20mm}
+\begin{figure}[h]
+\includegraphics[width=\textwidth]{gantt}
+\caption{Gantt chart for the project timeline}
+\end{figure}
 \newpage
 \section{Appendices}
-\subsection{Images}
-Neuron - https://online.science.psu.edu/sites/default/files/bisc004/content/neuron.jpg
-ANN - https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Artificial\_neural\_network.svg/2000px-Artificial\_neural\_network.svg.png
+\subsection*{Figure 1}
+Image of a biological neuron\\
+https://online.science.psu.edu/sites/default/files/bisc004/content/neuron.jpg
+\subsection*{Figure 2}
+Image of a simple multi-layer feedforward artificial neural network.\\
+ https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Artificial\_ neural\_network.svg/2000px-Artificial\_neural\_network.svg.png
+\subsection*{Figure 3}
+Plot of the tanh activation function.\\
+http://www.mpe.mpg.de/~ott/dpuser/tanh.png
+\subsection*{Figure 4}
+Screenshot of the FightingICE game platform.\\
+https://i.ytimg.com/vi/\_Poz6qwIwbc/maxresdefault.jpg
+\subsection*{Figure 5}
+Gantt chart of the project timeline.\\
+Created in GanttProject application.
 \newpage
 \section{References}
 \begin{thebibliography}{10}
@@ -272,11 +338,11 @@ ANN - https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Artificial\_neur
 	
 
 \bibitem{nnm}
-	Wilde, P
-	(1997)
-	\textbf{Neural Network Models}
+	Wilde, P.
+	(1997).
+	Neural Network Models.
 	[book]
-	P4-P14
+	pp. 4-14.
 	
 \bibitem{reinforce}
 	Barto, S. and Sutton R.
@@ -300,8 +366,15 @@ ANN - https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Artificial\_neur
 	Available at: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4220564/
 	[Accessed 23 Nov. 2016]
 	
+\bibitem{ea}
+	Prins, C.
+	(2004).
+	A simple and effective evolutionary algorithm for the vehicle routing problem.
+	[book]
+	pp. 20-35.	
+
 \bibitem{neapps}
-	Neural Networks Research Group.
+	Neural Networks Research Group
 	(2014).
 	Research on Neuroevolution Applications.
 	[online]
@@ -310,71 +383,72 @@ ANN - https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Artificial\_neur
 	
 \bibitem{fightingice}
 	Intelligent Computer Entertainment Lab, Ritsumeikan University.
+	(2010).
 	FightingGameAICompetition.
 	[online]
 	Available at: http://www.ice.ci.ritsumei.ac.jp/~ftgaic/
 	[Accessed 23 Nov. 2016]
 
 \bibitem{risi}
-	Risi, S \& Togelius, J
-	(2015)
-	\textbf{Neuroevolution in Games: State of the Art and Open Challenges}
+	Risi, S. and Togelius, J.
+	(2015).
+	Neuroevolution in Games: State of the Art and Open Challenges.
   	[online]
   	Available at: https://arxiv.org/pdf/1410.7326.pdf
   	[Accessed 03 Nov. 2016]
 
 \bibitem{pace}
-	Pace, A
-	(2014)
-	\textbf{Improving AI for simulated cars using Neuroevolution}
+	Pace, A.
+	(2014).
+	Improving AI for simulated cars using Neuroevolution.
 	[online]
-	Available at: \textit{http://commerce3.derby.ac.uk/ojs/index.php/gb/article/view/3/1}
+	Available at: http://commerce3.derby.ac.uk/ojs/index.php/gb/article/view/3/1
 	[Accessed 07 Nov. 2016]
 	
 \bibitem{lampro}
-	Lampropoulos, A
-	(2005)
-	\textbf{Machine Learning Paradigms}
+	Lampropoulos, A.
+	(2005).
+	Machine Learning Paradigms.
 	[online]
-	Available at: \textit{http://file.allitebooks.com/20150722/Machine\%20Learning\%20Para-digms-\%20Applications\%20in\%20Recommender\%20Systems.pdf}
+	Available at: http://file.allitebooks.com/20150722/Machine\%20Learning\%20Para-digms-\%20Applications\%20in\%20Recommender\%20Systems.pdf
 	[Accessed 18 Nov. 2016]
   
 \bibitem{incre}
-	Gomez, F \& Miikkulainen, R
-	(1997)
-	\textbf{Incremental Evolution of Complex General Behaviour}
+	Gomez, F. and Miikkulainen, R.
+	(1997).
+	Incremental Evolution of Complex General Behaviour
 	[online]
-	Available at: \textit{http://nn.cs.utexas.edu/downloads/papers/gomez.adaptive-behavior.pdf}
+	Available at: http://nn.cs.utexas.edu/downloads/papers/gomez.adaptive-behavior.pdf
 	[Accessed 18 Nov. 2016]
 	
 \bibitem{dota}
-	Batsford, T
-	(2014)
-	\textbf{Calculating Optimal Jungling Routes in DOTA2 Using Neural Networks and Genetic Algorithms}
+	Batsford, T.
+	(2014).
+	Calculating Optimal Jungling Routes in DOTA2 Using Neural Networks and Genetic Algorithms.
 	[online]
-	Available at: \textit{http://commerce3.derby.ac.uk/ojs/index.php/gb/article/view/14/12}
+	Available at: http://commerce3.derby.ac.uk/ojs/index.php/gb/article/view/14/12
 	[Accessed 18 Nov. 2016]
 	
 \bibitem{atari}
-	Hausknecht, M \& Lehman, J \& Stone, P
-	(2014)
-	\textbf{A Neuroevolution Approach to General Atari Game Playing}
+	Hausknecht, M., Lehman, J. and Stone, P.
+	(2014).
+	A Neuroevolution Approach to General Atari Game Playing.
 	[online]
-	Available at: \textit{https://www.cs.utexas.edu/~mhauskn/papers/atari.pdf}
+	Available at: https://www.cs.utexas.edu/~mhauskn/papers/atari.pdf
 	[Accessed 15 Nov. 2016]
 	
 \bibitem{genvid}
-	Braylan, A \& Hollenbeck, M \& Meyerson, E \& Miikulainen, R
-	(2015)
-	\textbf{Reuse of Neural Modules for General Video Game Playing}
+	Braylan, A., Hollenbeck, M., Meyerson, E. and Miikkulainen, R.
+	(2015).
+	Reuse of Neural Modules for General Video Game Playing
 	[online]
-	Available at: \textit{https://arxiv.org/pdf/1512.01537v1.pdf}
+	Available at: https://arxiv.org/pdf/1512.01537v1.pdf
 	[Accessed 17 Nov. 2016]
 	
 \bibitem{swarmann}
-	Dehuri, S \& Ghosh, S \& Cho, S-B
-	(2011)
-	\textbf{Integration of Swarm Intelligence and Artificial Neural Network}
+	Dehuri, S., Ghosh, S., and Cho, S-B
+	(2011).
+	Integration of Swarm Intelligence and Artificial Neural Network.
 	[book]
 	P1-P23
 
@@ -410,5 +484,34 @@ ANN - https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Artificial\_neur
 	Available at: http://zmjones.com/static/statistical-learning/hornik-nn-1991.pdf
 	[Accessed 24 Nov. 2016]
 	
+\bibitem{gas}
+	Vavak, F. and Fogarty, T.
+	(1996).
+	Comparison of Steady State and Generational Genetic Algorithms for Use in Nonstationary Environments.
+	[online]
+	Available at: http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.55.3585-\&rep=rep1\&type=pdf
+	[Accessed 24 Nov. 2016]
+	
+\bibitem{neat}
+	Kenneth, S. and Miikkulainen, R.
+	(2002).
+	Evolving neural networks through augmenting topologies.
+	[book]
+	pp. 1-30.
+	
+\bibitem{hyperneat}
+	Kenneth, S., D'Ambrosio, D. and Gauci, J.
+	(2009).
+	A hypercube-based encoding for evolving large-scale neural networks.
+	[book]
+	pp. 05-09.
+	
+\bibitem{hypehype}
+	Evolutionary Complexity Research Group at UCF.
+	(2003).
+	The hypercube-based neuroevolution of augmenting topologies (HyperNEAT).
+	[online]
+	Available at: http://eplex.cs.ucf.edu/hyperNEATpage/
+	[Accessed 24 Nov. 2016]
 \end{thebibliography}
 \end{document}
