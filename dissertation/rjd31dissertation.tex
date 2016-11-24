@@ -66,41 +66,89 @@ Neuroevolution is a popular technique for machine learning in which the topology
 \newpage
 \section{Introduction}
 \subsection{Motivation}
-Machine learning is a heavily researched field of artificial intelligence in which machines are given the ability to learn without being explicitly programmed. Various methods of machine learning exist which allow the machine to adapt itself in order to process new data. One of these methods is neuroevolution, which involves the weights and/or topology of an artificial neural network being adjusted by an evolutionary algorithm.\\
+The ability to learn is a fundamental attribute of intelligent behaviour \cite{michalski}, in which one acquires knowledge or skills through study, experience, or being taught. The field of machine-learning aims to imitate this learning attribute and apply it to machines in order to improve their performance at tasks without being explicity programmed.\\
 
-The neuroevolution method is loosely based on the way the biological nervous system operates: with neurons communicating through axons, represented by nodes of the neural network with weighted connections. Neuroevolution is a form of reinforcement learning, which means a notion of reward is introduced and the machine attempts to maximise said reward. The wide application of reinforcement has given neuroevolution popularity in the fields of artificial life and evolutionary robotics. This notion of reward also allows the method to easily be applied to computer games since the reward is usually simple to measure, e.g. the hit-points of the player's character.\\
+Various methods of machine-learning exist which allow the agent (machine) to adapt itself in order to process new data. One of these methods is neuroevolution, which involves the weights and/or topology of an artificial neural network being adjusted by an evolutionary algorithm. The neuroevolution method is loosely based on the way the biological nervous system operates: with neurons communicating through axons, represented by nodes of the neural network with weighted connections. Neuroevolution has received huge popularity due to the fact that many artificial intelligence problems can be cast as optimisation problems, and since the method is ground in biological metaphor and evolutionary theory. \cite{risi}\\
 
+One way to test the effectiveness of machine-learning methods is through artificial intelligence in computer games. Since the state of a game is usually easily determined (e.g. the hit-points of both player's characters), the effectiveness of the learning method when controlling the agent's actions can be easily evaluated. The FightingICE platform \cite{fightingice}, is a two-dimensional fighting game written in Java by a group in Ritsumeikan University, Kyoto. The platform allows programming of artificially intelligent agents within the game and sends the agent delayed information about the current state of the game. 
+\newpage
 \subsection{Objectives}
-This project aims to implement a neuroevolution algorithm acting on a learning agent in the FightingICE game platform. FightingICE is a two-dimensional fighting game written in Java by Intelligent Computer Entertainment Lab, Japan. The platform allows easy implementation of artificial intelligence by sending delayed game information to the agent. Using neuroevolution we hope to evolve an agent to the point of being competitive versus a human opponent, though not unbeatable. The performance of the agent will be evaluated at various stages of the evolution in order to evaluate the effectiveness of the algorithm. \\
+This project aims to implement a neuroevolution algorithm acting on a learning agent in the FightingICE game platform. The inputs to the algorithm will be based on the agent's environment, such as the enemy's current position and the enemy's energy level, the outputs will be character actions e.g. move left, move right, attack. In order to increase the rate of the agent's evolution, an environment using incremental evolution will be used, exposing the agent to progressively more difficult challenges.\\
 
+Once implemented, we will evaluate the algorithms performance versus a human opponent. We will use human volunteers of varying skill levels in the game, and record their performance versus the agent at different stages of its evolution. We will also compare the effectiveness of the algorithm to that of previous prototypes to evaluate any improvements made.\\
+
+From this project, we hope to assess the effectiveness of neuroevolution as a method of machine-learning and gain the programming experience from implementing it. We also hope to find the potential to which an agent employing a neuroevolution method to learn can perform. Through comparisons of the algorithm to previous prototypes, we can also assess the progress of our algorithm over time and how improvements affect the agent's performance.
+\newpage
 \subsection{Professional, Legal, Ethical and Social Issues}
+\subsubsection{Professional Issues}
 
 \newpage
 \section{Literature Review}
+In this section of the dissertation, we will present any fundamental concepts used in the project. We will also discuss and evaluate relevant work in the field.
 \subsection{Machine Learning}
-\subsubsection{Learning Paradigms}
-Learning is an essential human function in which we modify our behaviour tendency according to experiences, to become better when a similar situation occurs. In the study of machine learning, algorithms, computer applications, and systems, utilise learning to improve their performance at certain tasks. There are two main entities in the machine learning model, the teacher and the learner. The teacher contains the knowledge to perform a given task while the learner has to learn the knowledge the teacher holds. \cite{swarmann} There are three types of machine learning:
-\begin{enumerate}
+Learning is a fundamental human function in which we modify our behaviour tendency according to experiences or teaching \cite{michalski}, to become better when a similar situation occurs. In the study of machine-learning, algorithms, computer applications, and systems, utilise learning to improve their performance at certain tasks. There are two main entities in the machine-learning model, the teacher and the learner. The teacher, while not always available, contains the knowledge to perform a given task while the learner has to learn the knowledge the teacher holds. \cite{swarmann} There are three types of machine learning:
+\begin{itemize}
 \item \emph{Supervised Learning}\\
 A teacher provides the learner with a set of input and desired output pairs. The learner can then use these examples to improve its performance at the task.
 \item \emph{Unsupervised/Self-organised Learning}\\
-There is no teacher, so the learner learns based only on the stimuli received. A common application is finding patterns or grouping within data, using methods such as cluster analysis.
+There is no teacher, so the learner learns based only on the observed relationships. A common application is finding patterns or grouping within data, using methods such as cluster analysis.
 \item \emph{Reinforcement Learning}\\
-The agent uses goal-directed learning where a notion of reward is introduced and the agent attempts to maximise this reward. There is no teacher for the agent and no explicit model of the environment.
-\end{enumerate}
+The agent uses goal-directed learning where a notion of reward is introduced and the agent attempts to maximise this reward. There is no teacher for the agent and no explicit model of the environment. Computational approach to learning from interaction. \cite{reinforce}
+\end{itemize}
+\newpage
+Another way to categorise machine-learning methods is by the output of the method. The output of the method is usually a good indication of the application of the method, for example, two classes of outputs 'spam' and 'not spam' in spam filtering. 
+\begin{itemize}
+\item \emph{Classification}\\
+Inputs are assigned to two or more classes (groups) of output. Typically used with a supervised learning method. One application is spam filtering.
+\item \emph{Regression}\\
+Supervised learning problem similar to classification, however the outputs are continuous rather than discrete.
+\item \emph{Clustering}\\
+A set of inputs to be divided into groups. Unlike classification, groups are not defined beforehand. Typically an unsupervised learning task.
+\item \emph{Density Estimation}\\
+Finds the distribution of inputs in some space.
+\item \emph{Dimensionality Reduction}\\
+Inputs mapped into a lower-dimensional space.\\
+\end{itemize}
+Machine-learning is being applied extensively in modern day life, though not everyone is aware of it. The personalisation of search engine results and social networking feeds are one application, providing user's with appropriate content. \cite{search} Other examples of machine-learning application include optical character recognition (OCR) and computer vision. \cite{ocr}
 \newpage
 \subsection{Neuroevolution}
 \subsubsection{Fundamentals}
-Neuroevolution is a popular biologically-inspired method of machine learning in which an artificial neural network is evolved using an evolutionary algorithm. The method has proved popular, especially in the fields of artificial life, evolutionary robotics and computer games. One reason for its popularity is the fact that neuroevolution is a form of reinforcement learning, which can be applied more generally than its counterpart, supervised learning. 
+Neuroevolution is a biologically-inspired method of machine learning in which an artificial neural network is evolved using an evolutionary algorithm. The biological inspiration for the method comes from the nervous system in which neurons communicate through axons, translated to machine-learning by the nodes of a neural network communicating through weighted connections.\\
 
+The method has proved popular, especially in the fields of artificial life, evolutionary robotics and computer games. One reason for its popularity is the fact that neuroevolution is a form of reinforcement learning, which can be applied more generally than its counterpart, supervised learning. The popularity also stems from the fact that the method is ground in biological metaphor and evolutionary theory. The method consistently performs well in many areas of application and can handle large action/state spaces. \cite{risi}\\
+
+The applications of neuroevolution are numerous and diverse. One application is the implementation of artificially intelligent agents in computer games (see section 2.2.5). Other applications include dynamic resource allocation, optimising manufacturing processes and even creating musical melodies. \cite{neapps}
+\begin{figure}[h]
+\includegraphics[width=\textwidth]{neuron}
+\caption{Simple diagram of a biological neuron.}
+\end{figure}
+\newpage
 \subsubsection{Artificial Neural Networks}
-Artificial neural networks model the way the brain solves problems with collections of neurons communicating through axons, represented with neurons with weighted connections. Neural networks have an associative (content-addressable) memory and can also implement parallel processing. They are often applied to pattern finding within data.\\
+Artificial neural networks model the way the brain solves problems with collections of neurons communicating through axons, represented with nodes of the network with weighted connections. \\
 
-The most basic version of an ANN (artificial neural network) is a perceptron. A perceptron is a simple machine which takes a variable number of input nodes which connect to a single output node. From the perceptron evolved the multi-layer feed forward network, which incorporates extra 'hidden' layers of neurons between the input and output. The more hidden layers there are and the more nodes in these layers, the more complex behaviour a network can experience.\\
+The most basic version of an ANN (artificial neural network) is a perceptron. A perceptron is a simple machine which takes a variable number of input nodes which connect to a single output node. \cite{percept} The concept of the perceptron was extended by means of the the multi-layer feed forward network, which incorporates extra 'hidden' layers of nodes between the input and output. The more hidden layers there are, and the more nodes in these layers, the more complex behaviour a network can experience. \cite{ffann}\\
 
-In order to saturate neuron values to a usable range (usually -1 to 1), an activation function is used. The most basic version of this function is ?, where any values below zero will result in an activation of zero, and any values above zero in an activation of one. It is also possible to use more general, non-linear functions such as tanh, shown below.\\
-\includegraphics[width=0.4\textwidth, height=0.4\textwidth]{tanh}
+Neural networks can be employed in a variety of ways, for both supervised and unsupervised/reinforcement learning problems. Networks can have an associative (content-addressable) memory and can also implement parallel processing across individual nodes. \cite{nnm} Common applications for neural networks include character recognition, image compression and stock market prediction. \cite{nnapps}
+\begin{figure}[h]
+\centering{
+\includegraphics[width=0.8\textwidth]{ann}
+\caption{Multi-layer feed forward network with labelled layers.}
+}
+\end{figure}
+\newpage
+\subsubsection*{Activation Function}
+In order to calculate the output of a certain node in a network given the input or set or inputs, we use an activation function. \cite{activate} This output of the node is usually saturated to a value between minus and positive one by the function and then scaled appropriately when output. \cite{swarmann} \\
 
+The simplest activation function is the step function \cite{nnm}, where if the weighted sum of the inputs to the node falls below a certain threshold the output is zero, else the output is one. This can be thought as the node either sending signals or not sending signals. The step function is used in perceptrons and often shows up in other models. \cite{percept} Since there are only two possible outputs of nodes using the step function, it is common to use different, more general functions.\\
+
+One of these more general, non-linear activation function is the hyperbolic tangent function tanh, shown in figure 3. This allows nodes to have an activation output of a real number between negative one and one. The usage of these more general functions allows us to exhibit more complex behaviour within the network.
+\begin{figure}[h]
+\centering{
+\includegraphics[width=0.8\textwidth]{tanh}
+\caption{tanh activation function plot.}
+}
+\end{figure}
+\newpage
 \subsubsection{Evolutionary Algorithms}
 Evolutionary algorithms are methods of optimisation, where potential solutions to the problem are seen as individuals of some population. Each individual in the population is assigned a fitness value which is calculated according to the performance of the provided solution, and the algorithm works to find the best (fittest) of these solutions. Using techniques inspired by biological evolution such as reproduction, mutation, recombination, and selection, new populations of solutions can be generated and assessed. Using evolutionary algorithms allows fine tuning of the search space through constants such as rate of reproduction and mutation rate. [Elitism?GAs?]
 
@@ -116,7 +164,7 @@ A notable extension of NEAT which could potentially be appropriate for the proje
 \subsubsection{Neuroevolution in Games}
 How neuroevolution can be used to evolve learning agents in games, usually agent is optimising some value e.g. HP. How fitness in games is evaluated, giving some examples. How neuroevolution fares compared to other learning algorithms. Present examples of projects implementing neuroevolution to learn.
 \subsubsection{Incremental Evolution}
-When an agent is provided with a complex behaviour, it may have trouble evolving to perform at its potential. Using incremental evolution, the behaviour can be learnt incrementally with tasks gradually increasing in difficulty. This form of evolution proved effective in one implementation \cite{incre}. The agent's task was a prey capture task: the agent moves through the environment and must catch its prey before the set number of time-steps. With increasingly difficult tasks, the agent was able to rapidly improve its performance, and skip many potential generations of evolution.
+When an agent is provided with a complex behaviour, it may have trouble evolving to perform at its potential. Using incremental evolution, the behaviour can be learnt incrementally with tasks gradually increasing in difficulty. This form of evolution proved effective in at least one implementation \cite{incre}. The agent's task was a prey capture task: the agent moves through the environment and must catch its prey before the set number of time-steps. With increasingly difficult tasks, the agent was able to rapidly improve its performance, and skip many potential generations of evolution.
 
 \newpage
 \subsection{FightingICE}
@@ -133,8 +181,15 @@ Discuss and reference relevant projects which have been completed using the Figh
 
 \newpage
 \section{Organisation}
+In this section we present the decision process on how to approach the task including analysis of the task itself, analysis of the requirements, and analysis of the risks. A gantt chart of the project timeline is also included.
 \subsection{Project Task Analysis}
-The objective of this project is to evolve an agent in the FightingICE game platform with a neuroevolution method. The agent will be evolved to the point of being competitive versus a human opponent. 
+The objective of this project is to evolve an agent in the FightingICE game platform with a neuroevolution method. The agent will be evolved to the point of being competitive versus a human opponent. \\
+
+In order to implement the neuroevolution method, we will first need an artificial neural network to control the actions of the agent. The neural network will need to take as input various factors from its environments such as the location of the opposing player, the energy of the opposing player and whether the opponent is performing an attack. The outputs of the neural network will be actions for the character, for example move left, jump, attack. Once a neural network controlling the agent has been implemented, the network must be evolved to imitate the learning process. This will involve deciding on a suitable evolutionary algorithm and the encoding of the network's genotype. It will also need to be decided whether only the weights of the network are evolved, or also augmenting the topology (NEAT) and/or altering the activation function.\\
+
+To improve the rate of evolution for the agent, we will create an incremental evolution environment where the agent is exposed to tasks of gradually increasingly difficulty. To implement this environment, we will limit the capabilities of the training opponent and gradually return them.\\
+
+To test whether the agent's performance has improved to the point of being competitive versus a human opponent, we will find volunteers of varying skills to face our agent in the game. The results of the player versus our agent at various stages of its evolution can then be evaluated to assess the effectiveness of the neuroevolution algorithm which we implemented.
 \newpage
 \subsection{Requirement Analysis}
 \subsubsection{Table of Requirements}
@@ -142,40 +197,79 @@ The objective of this project is to evolve an agent in the FightingICE game plat
 \hline
 No. & Requirement & Priority & Predecessors\\ \hline
 1 & Implement a neural network to control agent's behaviour & High &\\ \hline
-1.1 & Initialise network with random weights, test if sensors can be read and actions output & High &\\ \hline
+1.1 & Initialise a network with random weights, test if the sensors can be read and the actions can be output & High &\\ \hline
 1.2 & Implement a simple rule-based agent for the agent to compete versus & High & 1.1\\ \hline
 1.3 & Test and execute at least one agent from the FightingICE AI competition & Medium &\\ \hline
 2 & Implement an appropriate evolutionary algorithm to evolve the neural network & High & 1\\ \hline
 2.1 & Test whether a simple evolutionary algorithm evolving the weights of the network improves the agent's performance & High & 1\\ \hline
-2.2 & Adapt and use the HyperNEAT method, test whether it improves on the simple algorithm & Medium & 1, 2.1\\ \hline
+2.2 & Adapt and use the HyperNEAT method, test whether it improves on the previous algorithm & Medium & 1, 2.1\\ \hline
 3 & Create an incremental evolution environment for the agent & Medium & 1, 2\\ \hline
 3.1 & Limit the capabilities of the opponent and incrementally return them to test whether speed of evolution is improved & Medium & 1, 2\\ \hline
-3.2 & Evolve against a simple agent, replace opponent with best agent after convergence and continue & Medium & 1, 2, 3.1\\ \hline 
+3.2 & Evolve against a simple agent, replace opponent with best agent after convergence and continue & Medium & 1, 2\\ \hline 
 4 & Evaluate the agent's performance versus a human opponent at various stages of its evolution & High & 1, 2\\ \hline
 \end{tabular}
 \newpage
 \subsubsection{Requirements Textual Descriptions}
 \subsubsection*{1 - Implement a neural network to control agent's behaviour}
-\subsubsection*{1.1 - Initialise network with random weights, test if sensors can be read and actions output}
+To implement an agent in the FightingICE platform controlled by a simple neural network.
+\subsubsection*{1.1 - Initialise network with random weights, test if sensors can be read and actions can be output}
+In order to test whether sensors can be read and actions can be output, initialise a simple neural network with random weights to control the agent. Ensure game information is being received and number of outputs nodes match character actions.
 \subsubsection*{1.2 - Implement a simple rule-based agent for the agent to compete versus}
+Create agent in FightingICE which follows simple rule-based logic. Use as an opponent for the neuroevolution agent while it is evolving.
 \subsubsection*{1.3 - Test and execute at least one agent from the FightingICE AI competition}
+Find agents from the FightingICE AI Competition and test them to see strategies of other programmer's work. Attempt to read and understand the code.
+\subsubsection*{2 - Implement an appropriate evolutionary algorithm to evolve the neural network}
+Find and implement an appropriate evolutionary algorithm to evolve the ANN of the agent. Decide on implementation based on performance evaluation.
+\subsubsection*{2.1 - Test whether a simple evolutionary algorithm evolving the weights of the network improves the agent's performance}
+Implement a simple EA such as hill-climbing or an algorithm using only mutation to evolve the agent's neural network. Test whether the evolution improves the agent's performance and if so, to what extent.
+\newpage
+\subsubsection*{2.2 - Adapt and use the HyperNEAT method, test whether it improves on the previous algorithm}
+Replace the previous evolutionary algorithm with an implementation of the HyperNEAT or other appropriate neuroevolution method. Test the new implementation versus the rule-based agent to test whether it improves on the previous algorithm.
+\subsubsection*{3 - Create an incremental evolution environment for the agent}
+Create an incremental evolution environment to speed the process of evolution for the agent.
+\subsubsection*{3.1 - Limit the capabilities of the opponent and incrementally return them to test whether speed of evolution is improved}
+Initially, completely limit the capabilities of the agent's opponent and gradually return these capabilities over time. Evaluate whether gradually exposing the agent to these capabilities improved the speed of evolution of the agent.
+\subsubsection*{3.2 - Evolve against a simple agent, replace opponent with best agent after convergence and continue}
+Begin evolution with simple rule-based opponent. Once convergence in evolution occurs, replace the agent's opponent with the current best agent. Repeat this process incrementally and compare performance of each opponent with that of its successors.
+\subsubsection*{4 - Evaluate the agent's performance versus a human opponent at various stages of its evolution}
+Test the performance of different agents at different stages of their evolution against human players. Attempt to find volunteers that rank at different skill levels from novice to expert. From this we can assess whether the agent was evolved to become competitive versus a human opponent.
+
 \newpage
 \subsection{Performance Assessment}
 \subsubsection{Table of Project Prototypes}
 \begin{tabular}{|p{0.4\linewidth}|p{0.2\linewidth}|p{0.4\linewidth}|}
 \hline
 Objective & Date & Assessment\\ \hline
-Prototype 1: Agent using neural network to sense environment and output simple actions in FightingICE & 06/01/17 & Agent can proficiently perceive its environment and output simple actions\\ \hline
-Prototype 2: Agent controlled by neural network being evolved by simple evolutionary algorithm, altering only the weights of the network & 20/01/17 & Evaluate agents performance versus simple AI opponent at different stages of its evolution\\ \hline
-Prototype 3: Agent evolved with HyperNEAT or other appropriate neuroevolution method & 17/02/17 & Evaluate agent's performance versus AI and compare whether method was more effective than simple EA\\ \hline
-Prototype 4: Agent with appropriate learning method implemented in incremental evolution environment & 10/03/17 & Agent's environment is adapted to utilise incremental evolution. Agent's performance assessed and compared versus learning without incremental environment.\\ \hline
+Prototype 1: Agent using neural network to sense environment and output simple actions in FightingICE & 15/12/2016 & Agent can proficiently perceive its environment and output simple actions\\ \hline
+Prototype 2: Agent controlled by neural network being evolved by simple evolutionary algorithm, altering only the weights of the network & 20/01/2017 & Evaluate agents performance versus simple AI opponent at different stages of its evolution\\ \hline
+Prototype 3: Agent evolved with HyperNEAT or other appropriate neuroevolution method & 10/02/2017 & Evaluate agent's performance versus AI and compare whether method was more effective than simple EA\\ \hline
+Prototype 4: Agent with appropriate learning method implemented in incremental evolution environment & 10/03/2017 & Agent's environment is adapted to utilise incremental evolution. Agent's performance assessed and compared versus learning without incremental environment.\\ \hline
 \end{tabular}
 \newpage
 \subsection{Risk Assessment}
+\subsubsection{Table of Risks}
+\begin{tabular}{|p{0.1\linewidth}|p{0.4\linewidth}|p{0.2\linewidth}|p{0.3\linewidth}|}
+\hline
+No. & Risk Name & Probability & Response\\ \hline
+1 & Laptop failure & Low & Online storage (github), backups\\ \hline
+2 & Difficulties with FightingICE platform & Medium & Consult tutorials and relevant documentation from website\\ \hline
+3 & Difficulties with Java programming & Low & Spend more time familiarising with language and practising\\ \hline
+\end{tabular}
 \newpage
 \section{Appendices}
-
+\subsection{Images}
+Neuron - https://online.science.psu.edu/sites/default/files/bisc004/content/neuron.jpg
+ANN - https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Artificial\_neural\_network.svg/2000px-Artificial\_neural\_network.svg.png
+\newpage
+\section{References}
 \begin{thebibliography}{10}
+
+\bibitem{michalski}
+	Michalski, R., Carbonell, J. and Mitchell, T.
+	(1983).
+	Machine Learning: An Artificial Intelligence Approach. 
+	pp. 5-20.
+	
 
 \bibitem{nnm}
 	Wilde, P
@@ -183,6 +277,43 @@ Prototype 4: Agent with appropriate learning method implemented in incremental e
 	\textbf{Neural Network Models}
 	[book]
 	P4-P14
+	
+\bibitem{reinforce}
+	Barto, S. and Sutton R.
+	(1998).
+	Reinforcement Learning: An Introduction.
+	pp. 23-30.
+	
+\bibitem{search}
+	McCallum, A., Nigam, K., Rennie, J. and Seymore, K.
+	(2001).
+	A Machine Learning Approach to Building Domain-Specific Search Engines.
+	[online]
+	Available at: http://www.kamalnigam.com/papers/cora-ijcai99.pdf
+	[Accessed 23 Nov. 2016]
+	
+\bibitem{ocr}
+	Wernick, M., Yang, Y. and Strother, S.
+	(2010).
+	Machine Learning in Medical Imaging.
+	[online]
+	Available at: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4220564/
+	[Accessed 23 Nov. 2016]
+	
+\bibitem{neapps}
+	Neural Networks Research Group.
+	(2014).
+	Research on Neuroevolution Applications.
+	[online]
+	Available at: http://www.cs.utexas.edu/users/nn/pages/research/ne-applications.html
+	[Accessed 23 Nov. 2016]
+	
+\bibitem{fightingice}
+	Intelligent Computer Entertainment Lab, Ritsumeikan University.
+	FightingGameAICompetition.
+	[online]
+	Available at: http://www.ice.ci.ritsumei.ac.jp/~ftgaic/
+	[Accessed 23 Nov. 2016]
 
 \bibitem{risi}
 	Risi, S \& Togelius, J
@@ -205,7 +336,7 @@ Prototype 4: Agent with appropriate learning method implemented in incremental e
 	(2005)
 	\textbf{Machine Learning Paradigms}
 	[online]
-	Available at: \textit{http://file.allitebooks.com/20150722/Machine\%20Learning\%20Paradigms-\%20Applications\%20in\%20Recommender\%20Systems.pdf}
+	Available at: \textit{http://file.allitebooks.com/20150722/Machine\%20Learning\%20Para-digms-\%20Applications\%20in\%20Recommender\%20Systems.pdf}
 	[Accessed 18 Nov. 2016]
   
 \bibitem{incre}
@@ -247,5 +378,37 @@ Prototype 4: Agent with appropriate learning method implemented in incremental e
 	[book]
 	P1-P23
 
+\bibitem{percept}
+	Widrow, B. and Lehr, A.
+	(1990).
+	30 Years of Adaptive Neural Networks: Perceptron, Madaline, and Backpropagation.
+	[online]
+	Available at: https://pdfs.semanticscholar.org/8b73/adda1-5fa71b0a35ffedb899d6a72d621923b.pdf
+	[Accessed 24 Nov. 2016]
+	
+\bibitem{ffann}
+	Hornik, K.
+	(1989).
+	Multilayer Feedforward Networks are Universal Approximators.
+	[online]
+	Available at: http://deeplearning.cs.cmu.edu/pdfs/Kornick\_et\_al.pdf
+	[Accessed 24 Nov. 2016]
+	
+\bibitem{nnapps}
+	Stanford University.
+	(2013).
+	Applications of neural networks.
+	[online]
+	Available at: http://cs.stanford.edu/people/eroberts/courses/soco/projects/neural-networks/Applications/index.html
+	[Accessed 24 Nov. 2016]
+	
+\bibitem{activate}
+	Hornik, K.
+	(1990).
+	Approximation Capabilities of Multilayer Feedforward Networks.
+	[online]
+	Available at: http://zmjones.com/static/statistical-learning/hornik-nn-1991.pdf
+	[Accessed 24 Nov. 2016]
+	
 \end{thebibliography}
 \end{document}
