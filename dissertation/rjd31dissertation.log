@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.4)  24 NOV 2016 15:16
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.4)  6 MAR 2017 18:49
 entering extended mode
 **rjd31dissertation.tex
 
@@ -668,11 +668,11 @@ LaTeX Font Info:    ... okay on input line 6.
 \makeMPintoPDFobject=\count127
 \everyMPtoPDFconversion=\toks30
 ) ABD: EveryShipout initializing macros
-<images/hwlogo.png, id=4, 1284.8pt x 979.66pt>
-File: images/hwlogo.png Graphic file (type png)
- <use images/hwlogo.png>
-Package pdftex.def Info: images/hwlogo.png used on input line 12.
-(pdftex.def)             Requested size: 108.0011pt x 82.35066pt.
+<images/hwlogo.jpg, id=4, 1899.095pt x 948.54375pt>
+File: images/hwlogo.jpg Graphic file (type jpg)
+ <use images/hwlogo.jpg>
+Package pdftex.def Info: images/hwlogo.jpg used on input line 12.
+(pdftex.def)             Requested size: 125.99945pt x 62.93118pt.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <10.95> on input line 14.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -680,18 +680,18 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 14.
 
-<images/hwrobotics.png, id=6, 401.5pt x 184.69pt>
-File: images/hwrobotics.png Graphic file (type png)
- <use images/hwrobotics.png>
-Package pdftex.def Info: images/hwrobotics.png used on input line 17.
-(pdftex.def)             Requested size: 180.0pt x 82.80254pt.
+<images/roboticslogo.png, id=5, 434.62375pt x 200.75pt>
+File: images/roboticslogo.png Graphic file (type png)
 
-[1
+<use images/roboticslogo.png>
+Package pdftex.def Info: images/roboticslogo.png used on input line 17.
+(pdftex.def)             Requested size: 180.0pt x 83.1412pt.
+ [1
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <C:/Users/Robbie/Desktop/d
-issertation/FightingICENeuroevolution-master/dissertation/images/hwlogo.png> <C
+issertation/FightingICENeuroevolution-master/dissertation/images/hwlogo.jpg> <C
 :/Users/Robbie/Desktop/dissertation/FightingICENeuroevolution-master/dissertati
-on/images/hwrobotics.png>]
+on/images/roboticslogo.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 52--56
 
  []
@@ -971,258 +971,258 @@ Package pdftex.def Info: images/gantt.png used on input line 309.
 (pdftex.def)             Requested size: 360.0pt x 67.66951pt.
 
 [24 <C:/Users/Robbie/Desktop/dissertation/FightingICENeuroevolution-master/diss
-ertation/images/gantt.png (PNG copy)>]
-Overfull \hbox (8.80252pt too wide) in paragraph at lines 315--317
+ertation/images/gantt.png (PNG copy)>] [25] [26]
+Overfull \hbox (8.80252pt too wide) in paragraph at lines 322--324
 \OT1/cmr/m/n/10.95 https://online.science.psu.edu/sites/default/files/bisc004/c
 ontent/neuron.jpg 
  []
 
 
-Overfull \hbox (19.16249pt too wide) in paragraph at lines 318--320
+Overfull \hbox (19.16249pt too wide) in paragraph at lines 325--327
 \OT1/cmr/m/n/10.95 https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Ar
 tificial[] neu-
  []
 
-[25]
-Underfull \hbox (badness 4621) in paragraph at lines 354--360
+[27]
+Underfull \hbox (badness 4621) in paragraph at lines 361--367
 \OT1/cmr/m/n/10.95 [on-line] Avail-able at: http://www.kamalnigam.com/papers/co
 ra-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 362--368
+Underfull \hbox (badness 10000) in paragraph at lines 369--375
 []\OT1/cmr/m/n/10.95 Wernick, M., Yang, Y. and Strother, S. (2010). Ma-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 362--368
+Underfull \hbox (badness 10000) in paragraph at lines 369--375
 \OT1/cmr/m/n/10.95 chine Learn-ing in Med-i-cal Imag-ing. [on-line] Avail-able 
 at:
  []
 
 
-Underfull \hbox (badness 1052) in paragraph at lines 362--368
+Underfull \hbox (badness 1052) in paragraph at lines 369--375
 \OT1/cmr/m/n/10.95 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4220564/ [Ac-ce
 ssed
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 377--383
+Underfull \hbox (badness 10000) in paragraph at lines 384--390
 []\OT1/cmr/m/n/10.95 Neural Net-works Re-search Group (2014). Re-search
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 377--383
+Underfull \hbox (badness 10000) in paragraph at lines 384--390
 \OT1/cmr/m/n/10.95 on Neu-roevo-lu-tion Ap-pli-ca-tions. [on-line] Avail-able a
 t:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 377--383
+Underfull \hbox (badness 10000) in paragraph at lines 384--390
 \OT1/cmr/m/n/10.95 http://www.cs.utexas.edu/users/nn/pages/research/ne-
  []
 
 
-Underfull \hbox (badness 5592) in paragraph at lines 385--391
+Underfull \hbox (badness 5592) in paragraph at lines 392--398
 []\OT1/cmr/m/n/10.95 Intelligent Com-puter En-ter-tain-ment Lab, Rit-sumeikan U
 ni-ver-
  []
 
 
-Underfull \hbox (badness 3989) in paragraph at lines 385--391
+Underfull \hbox (badness 3989) in paragraph at lines 392--398
 \OT1/cmr/m/n/10.95 sity. (2010). Fight-ingGameAICom-pe-ti-tion. [on-line] Avail
 -able at:
  []
 
 
-Underfull \hbox (badness 5217) in paragraph at lines 393--399
+Underfull \hbox (badness 5217) in paragraph at lines 400--406
 []\OT1/cmr/m/n/10.95 Risi, S. and To-gelius, J. (2015). Neu-roevo-lu-tion in Ga
 mes:
  []
 
 
-Underfull \hbox (badness 2707) in paragraph at lines 393--399
+Underfull \hbox (badness 2707) in paragraph at lines 400--406
 \OT1/cmr/m/n/10.95 State of the Art and Open Chal-lenges. [on-line] Avail-able 
 at:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 401--407
+Underfull \hbox (badness 10000) in paragraph at lines 408--414
 []\OT1/cmr/m/n/10.95 Pace, A. (2014). Im-prov-ing AI for sim-u-lated
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 401--407
+Underfull \hbox (badness 10000) in paragraph at lines 408--414
 \OT1/cmr/m/n/10.95 cars us-ing Neu-roevo-lu-tion. [on-line] Avail-able at:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 401--407
+Underfull \hbox (badness 10000) in paragraph at lines 408--414
 \OT1/cmr/m/n/10.95 http://commerce3.derby.ac.uk/ojs/index.php/gb/article/view/3
 /1
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 409--415
+Underfull \hbox (badness 10000) in paragraph at lines 416--422
 []\OT1/cmr/m/n/10.95 Lampropoulos, A. (2005). Ma-chine Learn-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 409--415
+Underfull \hbox (badness 10000) in paragraph at lines 416--422
 \OT1/cmr/m/n/10.95 ing Paradigms. [on-line] Avail-able at:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 409--415
+Underfull \hbox (badness 10000) in paragraph at lines 416--422
 \OT1/cmr/m/n/10.95 http://file.allitebooks.com/20150722/Machine%20Learning%20Pa
 ra-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 409--415
+Underfull \hbox (badness 10000) in paragraph at lines 416--422
 \OT1/cmr/m/n/10.95 digms-%20Applications%20in%20Recommender%20Systems.pdf
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 417--423
+Underfull \hbox (badness 10000) in paragraph at lines 424--430
 []\OT1/cmr/m/n/10.95 Gomez, F. and Mi-ikku-lainen, R. (1997). In-cre-men-tal Ev
 o-
  []
 
 
-Underfull \hbox (badness 8075) in paragraph at lines 417--423
+Underfull \hbox (badness 8075) in paragraph at lines 424--430
 \OT1/cmr/m/n/10.95 lu-tion of Com-plex Gen-eral Be-haviour [on-line] Avail-able
  at:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 417--423
+Underfull \hbox (badness 10000) in paragraph at lines 424--430
 \OT1/cmr/m/n/10.95 http://nn.cs.utexas.edu/downloads/papers/gomez.adaptive-
  []
 
-[26]
-Underfull \hbox (badness 10000) in paragraph at lines 425--431
+[28]
+Underfull \hbox (badness 10000) in paragraph at lines 432--438
 \OT1/cmr/m/n/10.95 http://commerce3.derby.ac.uk/ojs/index.php/gb/article/view/1
 4/12
  []
 
 
-Underfull \hbox (badness 1728) in paragraph at lines 456--462
+Underfull \hbox (badness 1728) in paragraph at lines 463--469
 []\OT1/cmr/m/n/10.95 Widrow, B. and Lehr, A. (1990). 30 Years of Adap-tive Neu-
 
  []
 
 
-Underfull \hbox (badness 1264) in paragraph at lines 456--462
+Underfull \hbox (badness 1264) in paragraph at lines 463--469
 \OT1/cmr/m/n/10.95 ral Net-works: Per-cep-tron, Mada-line, and Back-prop-a-ga-t
 ion. [on-
  []
 
 
-Underfull \hbox (badness 5189) in paragraph at lines 456--462
+Underfull \hbox (badness 5189) in paragraph at lines 463--469
 \OT1/cmr/m/n/10.95 line] Avail-able at: https://pdfs.semanticscholar.org/8b73/a
 dda1-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 464--470
+Underfull \hbox (badness 10000) in paragraph at lines 471--477
 []\OT1/cmr/m/n/10.95 Hornik, K. (1989). Mul-ti-layer Feed-for-ward Net-works
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 464--470
+Underfull \hbox (badness 10000) in paragraph at lines 471--477
 \OT1/cmr/m/n/10.95 are Uni-ver-sal Ap-prox-i-ma-tors. [on-line] Avail-able at:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 464--470
+Underfull \hbox (badness 10000) in paragraph at lines 471--477
 \OT1/cmr/m/n/10.95 http://deeplearning.cs.cmu.edu/pdfs/Kornick[]et[]al.pdf [Ac-
 cessed
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 472--478
+Underfull \hbox (badness 10000) in paragraph at lines 479--485
 []\OT1/cmr/m/n/10.95 Stanford Uni-ver-sity. (2013). Ap-pli-ca-tions
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 472--478
+Underfull \hbox (badness 10000) in paragraph at lines 479--485
 \OT1/cmr/m/n/10.95 of neu-ral net-works. [on-line] Avail-able at:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 472--478
+Underfull \hbox (badness 10000) in paragraph at lines 479--485
 \OT1/cmr/m/n/10.95 http://cs.stanford.edu/people/eroberts/courses/soco/projects
 /neural-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 480--486
+Underfull \hbox (badness 10000) in paragraph at lines 487--493
 []\OT1/cmr/m/n/10.95 Hornik, K. (1990). Ap-prox-i-ma-tion Ca-pa-bil-i-ties of M
 ul-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 480--486
+Underfull \hbox (badness 10000) in paragraph at lines 487--493
 \OT1/cmr/m/n/10.95 ti-layer Feed-for-ward Net-works. [on-line] Avail-able at:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 480--486
+Underfull \hbox (badness 10000) in paragraph at lines 487--493
 \OT1/cmr/m/n/10.95 http://zmjones.com/static/statistical-learning/hornik-nn-199
 1.pdf
  []
 
 
-Underfull \hbox (badness 7925) in paragraph at lines 488--494
+Underfull \hbox (badness 7925) in paragraph at lines 495--501
 []\OT1/cmr/m/n/10.95 Vavak, F. and Fog-a-rty, T. (1996). Com-par-i-son of Stead
 y
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 488--494
+Underfull \hbox (badness 10000) in paragraph at lines 495--501
 \OT1/cmr/m/n/10.95 State and Gen-er-a-tional Ge-netic Al-go-rithms for Use
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 488--494
+Underfull \hbox (badness 10000) in paragraph at lines 495--501
 \OT1/cmr/m/n/10.95 in Non-sta-tion-ary En-vi-ron-ments. [on-line] Avail-able at
 :
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 488--494
+Underfull \hbox (badness 10000) in paragraph at lines 495--501
 \OT1/cmr/m/n/10.95 http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.55.
 3585-
  []
 
-[27]
-Underfull \hbox (badness 10000) in paragraph at lines 510--516
+[29]
+Underfull \hbox (badness 10000) in paragraph at lines 517--523
 []\OT1/cmr/m/n/10.95 Evolutionary Com-plex-ity Re-search Group at UCF.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 510--516
+Underfull \hbox (badness 10000) in paragraph at lines 517--523
 \OT1/cmr/m/n/10.95 (2003). The hypercube-based neu-roevo-lu-tion of aug-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 510--516
+Underfull \hbox (badness 10000) in paragraph at lines 517--523
 \OT1/cmr/m/n/10.95 ment-ing topolo-gies (Hy-per-NEAT). [on-line] Avail-able at:
 
  []
 
-[28]
+[30]
 (C:\Users\Robbie\Desktop\dissertation\FightingICENeuroevolution-master\disserta
 tion\rjd31dissertation.aux) ) 
 Here is how much of TeX's memory you used:
- 13094 strings out of 493921
- 279060 string characters out of 3144874
+ 13314 strings out of 493921
+ 284365 string characters out of 3144874
  314805 words of memory out of 3000000
- 16155 multiletter control sequences out of 15000+200000
+ 16374 multiletter control sequences out of 15000+200000
  8850 words of font info for 31 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 62i,8n,65p,982b,285s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 62i,8n,66p,982b,697s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pub
 lic/amsfonts/cm/cmbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publi
 c/amsfonts/cm/cmbx12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/
@@ -1231,9 +1231,9 @@ fonts/cm/cmr12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfon
 ts/cm/cmr17.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/
 cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
 /cmti10.pfb>
-Output written on rjd31dissertation.pdf (28 pages, 590185 bytes).
+Output written on rjd31dissertation.pdf (30 pages, 1849245 bytes).
 PDF statistics:
- 134 PDF objects out of 1000 (max. 8388607)
+ 140 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  48 words of extra memory for PDF output out of 10000 (max. 10000000)
 

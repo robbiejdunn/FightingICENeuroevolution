@@ -29,5 +29,6 @@
 \contentsline {subsubsection}{\numberline {3.4.1}Table of Risks}{23}
 \contentsline {subsubsection}{\numberline {3.4.2}Risks Textual Description}{23}
 \contentsline {subsection}{\numberline {3.5}Project Plan}{24}
-\contentsline {section}{\numberline {4}Appendices}{25}
-\contentsline {section}{\numberline {5}References}{26}
+\contentsline {section}{\numberline {4}Method and Results}{26}
+\contentsline {section}{\numberline {5}Appendices}{27}
+\contentsline {section}{\numberline {6}References}{28}
