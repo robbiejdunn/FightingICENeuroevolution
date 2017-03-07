@@ -1,6 +1,7 @@
 \documentclass[11pt,a4paper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
+\usepackage{lscape}
 \usepackage{pgfgantt}
 \graphicspath{ {images/}}
 \begin{document}
@@ -304,18 +305,63 @@ Since there is plenty of information and lots of tutorials on agent development 
 \newpage
 \subsection{Project Plan}
 Figure 5 shows a gantt chart representing a timeline for the completion of the project including all prototypes, the dissertation and the project poster. With this project plan we hope to leave appropriate time to evaluate any results as well as carefully thought out prototype deadline which will result in any code problems occurring early. The plan has been shown to and approved by both the project supervisor and co-supervisor.
-\vspace{20mm}
-\begin{figure}[h]
-\includegraphics[width=\textwidth]{gantt}
-\caption{Gantt chart for the project timeline}
-\end{figure}
 \newpage
-\begin{ganttchart}{1}{12}
-	\gantttitle{2011}{12} \\
-	\gantttitlelist{1,...,12}{1} \\
+\begin{landscape}
+{\centering
+\subsubsection{Gantt Chart}
+}
+\vspace{10mm}
+\begin{ganttchart}[vgrid, hgrid]{1}{24}
+	\gantttitle{2016}{9}
+	\gantttitle{2017}{15} \\
+	\gantttitle{Oct}{3}
+	\gantttitle{Nov}{3}
+	\gantttitle{Dec}{3}
+	\gantttitle{Jan}{3}
+	\gantttitle{Feb}{3}
+	\gantttitle{Mar}{3}
+	\gantttitle{Apr}{3}
+	\gantttitle{May}{3}
+	\\
+	\ganttbar{Deliverable One (03/10/2016 - 24/11/2016)}{1}{5}\\
+	\ganttbar{Complete Interview (24/11/2016 - 16/12/2016)}{6}{11}\\
+	\ganttgroup{Prototypes}{6}{17}\\
+	\ganttbar{Prototype One (24/11/2016 - 15/12/2016)}{6}{8}\\
+	\ganttlinkedbar{Prototype Two (16/12/2016 - 20/01/2017)}{9}{11}\\
+	\ganttlinkedbar{Prototype Three (23/01/2017 - 13/02/2017)}{12}{13}\\
+	\ganttlinkedbar{Prototype Four (14/02/2017 - 14/03/2017)}{14}{17}\\
+	\ganttbar{Results Evaluation (15/03/2017 - 10/04/2017)}{18}{19}\\
+	\ganttbar{Complete Dissertation (10/04/2017 - 24/04/2017)}{20}{20}\\
+	\ganttbar{Project Poster (24/04/2017 - 19/05/2017)}{21}{23}\\
 \end{ganttchart}	
+\end{landscape}
 \newpage
-\section{Method and Results}
+\section{Methodology and Results}
+\subsection{Prototype One: Artificial Neural Network in Game Framework}
+\subsubsection{Design}
+The initial prototype of a simple ANN was implemented without the use of any Java libraries.
+\subsubsection{Implementation}
+The neural network is implemented in the class NeuralNetwork which provides methods to both initialise the network and feed through the network to determine output. When the class is initialised, a network is created with three input nodes, ten hidden and seven output. Weights for the network are stored as two arrays of doubles, each corresponding to a separate layer of the network and are initialised using a Java Random object to a value between minus one and one. Inputs are fed through the network with the feed() method which returns an array of doubles representing the activations of the output layer nodes. The method first calculates the activations of hidden layer nodes using the initial inputs and weights of the network, then using the hidden activations it is possible to calculate activations for the output.
+
+In order to implement the network into the FightingICE game framework a controller class called Prototype1 was used. The class implements the AIInterface interface provided with FightingICE in order to read input and send output to the game. The inputs for the network are the X-coordinate of the agent, the Y-coordinate of the agent and the agent's energy, which are all provided with appropriate methods from he CommandCenter class. Before feeding the inputs into the network, they are normalised using the hyperbolic tangent function to have inputs within the range minus one to one. After being fed through the network, the output activations are used to determine which buttons will be pressed by the agent. 
+\subsubsection{Evaluation}
+
+\newpage
+\subsection{Prototype Two: Weights of Neural Network Evolved by Genetic Algorithm}
+\subsubsection{Design}
+\subsubsection{Implementation}
+\subsubsection{Evaluation}
+\subsection{Prototype Three: Network Evolved using HyperNEAT Method}
+\subsubsection{Design}
+\subsubsection{Implementation}
+\subsubsection{Evaluation}
+\subsection{Prototype Four: Appropriate Learning Method Implemented in Incremental Evolution Environment}
+\subsubsection{Design}
+\subsubsection{Implementation}
+\subsubsection{Evaluation}
+\newpage
+\section{Testing and Performance Assessment}
+\section{Conclusions}
 \newpage
 \section{Appendices}
 \subsection*{Figure 1}
