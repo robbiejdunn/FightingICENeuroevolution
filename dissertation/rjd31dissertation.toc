@@ -1,0 +1,59 @@
+\contentsline {section}{\numberline {1}Introduction}{6}
+\contentsline {subsection}{\numberline {1.1}Motivation}{6}
+\contentsline {subsection}{\numberline {1.2}Objectives}{8}
+\contentsline {subsection}{\numberline {1.3}Professional, Legal, Ethical and Social Issues}{9}
+\contentsline {subsubsection}{\numberline {1.3.1}Professional Issues}{9}
+\contentsline {subsubsection}{\numberline {1.3.2}Legal Issues}{9}
+\contentsline {subsubsection}{\numberline {1.3.3}Ethical and Social Issues}{9}
+\contentsline {section}{\numberline {2}Literature Review}{10}
+\contentsline {subsection}{\numberline {2.1}Machine Learning}{10}
+\contentsline {subsection}{\numberline {2.2}Artificial Neural Network and Neuroevolution}{12}
+\contentsline {subsubsection}{\numberline {2.2.1}Artificial Neural Network}{12}
+\contentsline {subsubsection}{\numberline {2.2.2}Evolutionary Algorithms}{14}
+\contentsline {subsubsection}{\numberline {2.2.3}Neuroevolution}{17}
+\contentsline {subsubsection}{\numberline {2.2.4}Incremental Evolution}{17}
+\contentsline {subsection}{\numberline {2.3}FightingICE Game Platform}{18}
+\contentsline {subsubsection}{\numberline {2.3.1}Learning Environment}{18}
+\contentsline {subsection}{\numberline {2.4}Related Work}{19}
+\contentsline {section}{\numberline {3}Organisation}{20}
+\contentsline {subsection}{\numberline {3.1}Project Task Analysis}{20}
+\contentsline {subsection}{\numberline {3.2}Requirement Analysis}{21}
+\contentsline {subsubsection}{\numberline {3.2.1}Table of Requirements}{21}
+\contentsline {subsubsection}{\numberline {3.2.2}Requirements Textual Descriptions}{22}
+\contentsline {subsection}{\numberline {3.3}Performance Assessment}{24}
+\contentsline {subsubsection}{\numberline {3.3.1}Table of Project Prototypes}{24}
+\contentsline {subsubsection}{\numberline {3.3.2}Prototypes Textual Descriptions}{25}
+\contentsline {subsection}{\numberline {3.4}Risk Assessment}{26}
+\contentsline {subsubsection}{\numberline {3.4.1}Table of Risks}{26}
+\contentsline {subsubsection}{\numberline {3.4.2}Risks Textual Description}{26}
+\contentsline {subsection}{\numberline {3.5}Project Plan}{26}
+\contentsline {subsubsection}{\numberline {3.5.1}Gantt Chart}{27}
+\contentsline {section}{\numberline {4}Methodology and Results}{28}
+\contentsline {subsection}{\numberline {4.1}Prototype One: Artificial Neural Network in Game Framework}{28}
+\contentsline {subsubsection}{\numberline {4.1.1}Design}{29}
+\contentsline {subsubsection}{\numberline {4.1.2}Implementation}{31}
+\contentsline {subsubsection}{\numberline {4.1.3}Evaluation}{34}
+\contentsline {subsection}{\numberline {4.2}Prototype Two: Weights of Neural Network Evolved by Genetic Algorithm}{35}
+\contentsline {subsubsection}{\numberline {4.2.1}Design}{36}
+\contentsline {subsubsection}{\numberline {4.2.2}Implementation}{38}
+\contentsline {subsubsection}{\numberline {4.2.3}Evaluation}{47}
+\contentsline {subsection}{\numberline {4.3}Prototype Three: Appropriate Learning Method Implemented in Incremental Evolution Environment}{51}
+\contentsline {subsubsection}{\numberline {4.3.1}Design}{52}
+\contentsline {subsubsection}{\numberline {4.3.2}Implementation}{53}
+\contentsline {subsubsection}{\numberline {4.3.3}Evaluation}{55}
+\contentsline {section}{\numberline {5}Testing and Performance Assessment}{60}
+\contentsline {section}{\numberline {6}Conclusions}{62}
+\contentsline {section}{\numberline {7}References}{65}
+\contentsline {section}{\numberline {8}Appendices}{67}
+\contentsline {subsection}{\numberline {8.1}Prototype 1}{68}
+\contentsline {subsubsection}{\numberline {8.1.1}Prototype1.java}{68}
+\contentsline {subsubsection}{\numberline {8.1.2}ANN.java}{70}
+\contentsline {subsection}{\numberline {8.2}Prototype 2}{72}
+\contentsline {subsubsection}{\numberline {8.2.1}Individual.java}{72}
+\contentsline {subsubsection}{\numberline {8.2.2}GeneticAlgorithm.java}{74}
+\contentsline {subsubsection}{\numberline {8.2.3}NeuralNetwork.java}{80}
+\contentsline {subsubsection}{\numberline {8.2.4}Prototype2.java}{83}
+\contentsline {subsection}{\numberline {8.3}Prototype 3}{87}
+\contentsline {subsubsection}{\numberline {8.3.1}P4.java (INC0)}{87}
+\contentsline {subsubsection}{\numberline {8.3.2}INC0.java (INC1)}{89}
+\contentsline {subsubsection}{\numberline {8.3.3}RandomAi.java (INC2)}{91}
